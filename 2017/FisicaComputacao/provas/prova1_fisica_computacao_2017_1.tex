@@ -1,0 +1,126 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{graphicx,color}
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%opcao 2 para acertar as margens
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }  % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+%alinhar o texto
+\usepackage[document]{ragged2e}
+
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+
+\begin{document}
+
+\subsection*{Jataí, 06/06/17. Physics. UFG - Jataí.}
+
+\subsection*{Prova 1. Física. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.1 in}
+\noindent
+Nome: \noindent\rule{11cm}{0.5pt} 
+
+\vspace{0.1 in}
+
+\textit{Dicas: Seja organizado na sua solução, faça letra legível, use régua, faça desenhos, seja didático. Use quantas folhas forem necessárias, o importante é sua solução ficar bem feita e o corretor conseguir entender. Mostre que você sabe o conteúdo cobrado.}
+
+\noindent
+\textbf{1)} a) O que é física? Qual a sua utilidade? b) Explique a contribuição que o aprendizado em física pode ter para um aluno do curso de Ciência da Computação?
+
+\vspace{0.1 in}
+
+\noindent
+\textbf{2)} a) O que é Ciência da Computação? b) Qual a interseção entre física e ciência da computação?
+
+\vspace{0.1 in}
+\noindent
+\textbf{3)} a) Um aluno do curso de Ciência da Computação chega atrasado no ponto de ônibus. Ele corre até o próximo ponto. O trajeto está indicado na figura \ref{trajetoria}. Determine o módulo do deslocamento total? b) Determine o comprimento total percorrido pelo aluno atrasado. c) Determine o vetor de deslocamento resultante.
+
+
+\vspace{0.1 in}
+\noindent
+\textbf{4) Gotas de chuva.} Se a resistência do ar sobre as gotas de chuva pudesse ser desprezada, poderíamos considerar essas gotas como objetos em queda livre. a) As nuvens que dão origem a chuvas estão em alturas típicas de algumas centenas de metros acima do solo. Estime a velocidade de uma gota de chuva ao cair no solo, se ela pudesse ser considerada um corpo em queda livre. b) Estime (pela sua experiência pessoal sobre chuva) a velocidade real de uma gota de chuva ao cair no solo. c) Com base nos resultados de a) e b), verifique se é uma boa aproximação desprezar a resistêncoa do ar sobre as gotas de chuva. Explique.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=2.9 in]{trajetoria.png}
+\caption{ Trajetória percorrida pelo aluno de Ciência da Computação que chegou atrasado no ponto de ônibus. Figura referente ao exercício 3).}
+\label{trajetoria}
+\end{figure}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\begin{flushright}
+\begin{small}
+\textit{O inconveniente das pessoas é a esperança de encontrar soluções fáceis. Sem dificuldade não há desafios. Sem desafios não há mérito, a vida é uma rotina. É na crise que aparece o melhor de cada um. Falar de crise é promovê-la, calar-se é exaltar o conformismo. Em vez disso, trabalhemos duro. A única crise ameaçadora é a tragédia de não querer superá-la.}  
+
+Albert Einstein.
+\end{small}
+\end{flushright}
+
+ 
+\end{document}
+
+
+
