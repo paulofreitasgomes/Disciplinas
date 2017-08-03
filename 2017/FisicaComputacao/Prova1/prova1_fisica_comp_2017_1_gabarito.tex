@@ -1,0 +1,282 @@
+\documentclass[12pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{graphicx,color}
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%opcao 2 para acertar as margens
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }  % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+%alinhar o texto
+\usepackage[document]{ragged2e}
+
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+
+\usepackage{tikz}
+
+
+\begin{document}
+
+\subsection*{Jataí, 06/06/17. Physics. UFG - Jataí.}
+
+\subsection*{Prova 1. Física. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.1 in}
+\noindent
+Nome: \noindent\rule{11cm}{0.5pt} 
+
+\vspace{0.1 in}
+
+\noindent
+\textbf{1)} a) O que é física? Qual a sua utilidade? b) Explique a contribuição que o aprendizado em física pode ter para um aluno do curso de Ciência da Computação? 
+
+\noindent
+\textbf{2)} a) O que é Ciência da Computação? b) Qual a interseção entre física e ciência da computação?
+
+
+\noindent
+\textbf{3)} a) Um aluno do curso de Ciência da Computação chega atrasado no ponto de ônibus. Ele corre até o próximo ponto. O trajeto está indicado na figura \ref{trajetoria}. Determine o módulo do deslocamento total? b) Determine o comprimento total percorrido pelo aluno atrasado. c) Determine o vetor de deslocamento resultante.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=2.9 in]{trajetoria.png}
+\caption{ Trajetória percorrida pelo aluno de Ciência da Computação que chegou atrasado no ponto de ônibus. Figura referente ao exercício 3).}
+\label{trajetoria}
+\end{figure}
+
+
+\noindent
+\textbf{4) Gotas de chuva.} Se a resistência do ar sobre as gotas de chuva pudesse ser desprezada, poderíamos considerar essas gotas como objetos em queda livre. a) As nuvens que dão origem a chuvas estão em alturas típicas de algumas centenas de metros acima do solo. Estime a velocidade de uma gota de chuva ao cair no solo, se ela pudesse ser considerada um corpo em queda livre. b) Estime (pela sua experiência pessoal sobre chuva) a velocidade real de uma gota de chuva ao cair no solo. c) Com base nos resultados de a) e b), verifique se é uma boa aproximação desprezar a resistência do ar sobre as gotas de chuva. Explique.
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\begin{flushright}
+\begin{small}
+\textit{O inconveniente das pessoas é a esperança de encontrar soluções fáceis. Sem dificuldade não há desafios. Sem desafios não há mérito, a vida é uma rotina. É na crise que aparece o melhor de cada um. Falar de crise é promovê-la, calar-se é exaltar o conformismo. Em vez disso, trabalhemos duro. A única crise ameaçadora é a tragédia de não querer superá-la.}  
+
+Albert Einstein.
+\end{small}
+\end{flushright}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+{\color{red}\textbf{1) Valor: 2 pontos. Solução}}
+
+a) Física é a ciência que estuda os fenômenos naturais. Por fenômenos naturais entende-se aqueles que existem na natureza independente da ação do homem. No método científico, uma das abordagens possíveis para esse estudo, repete-se o fenômeno com condições controladas para o seu entendimento. Após isso, o conhecimento obtido é usado no desenvolvimento de aplicações nas mais diversas áreas.
+
+b) No curso de Ciência da Computação o aluno tem contato com diversos aspectos e ferramentas para o entendimento de softwares e seu uso aplicado. Assim, o aluno deste curso pode criar ferramentas para gerar soluções nos mais diversos campos do conhecimento e também soluções com valor comercial. Em relação a física, o estudande de Ciência da Computação pode desenvolver algoritmos para solução de problemas matemáticos da física que são muito complicados ou trabalhosos para se resolver de forma analítica. Hoje em dia, a chamada Física Computacional é uma área em franca ascenção dentro da física.
+
+\vspace{0.1 in}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\noindent
+{\color{red}\textbf{2) Valor: 2 pontos. Solução}}
+a) Ciência da Computação é o estudo e automatização\footnote{Definição pessoal.} de métodos e operações lógicas e matemáticas. Através dessa automatização ganha-se em eficiência na realização de uma tarefa. b) A interseção com física reside no fato de que esses métodos e operações podem ter o objetivo de resolver problemas matemáticos dentro de um contexto físico. Por exemplo, o movimento dos planetas em torno do sistema solar segue a Lei da Gravitação Universal na qual a força que o sol exerce em cada planeta $\vec{F}_p$ é:
+\begin{equation}
+\vec{F} = \dfrac{GmM_s}{r^2} \hat{r}, \label{sjwuwh}
+\end{equation}
+onde $G$ é a constante universal de gravitação, $m$ é a massa do planeta (Mercúrio, Vênus, Terra, etc...), $M_s$ é a massa do Sol, $r$ é a distância entre o sol e o planeta e $\hat{r}$ é o versor (vetor de módulo 1) na direção da reta que liga o sol ao planeta em questão. Suponha agora que $m$ seja a massa de um satélite lançado da Terra. O sol e cada planeta irão exercer uma força do tipo da Eq. \ref{sjwuwh} nesse satélite. Qual será a trajetória do satélite? Todas essas forças irão determinar essa trajetória, de acordo com a Lei de Newton:
+\begin{equation}
+\vec{F} = m \dfrac{d^2 \vec{r}}{dt^2},
+\end{equation}
+onde $\vec{F}$ é dado pela Eq. \ref{sjwuwh}. Considerando 8 planetas mais o sol haverá 9 forças dependentes da distância atuando neste satélite. A maneira eficiente de resolver essa equação diferencial é de forma numérica. A precisão da solução irá depender do número de iterações na solução. Construindo um algoritmo e executando essa solução em um computador pode-se resolver com quantas iterações for necessário para que o erro seja pequeno, obtendo-se a solução desejada de forma simples. 
+
+Este é apenas um exemplo, e existem muitos outros nas mais diversas áreas da física: Mecânica, Eletromagnetismo, Mecânica Quântica, Física Estatística, etc...
+
+\vspace{0.1 in}
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+
+
+
+{\color{red}\textbf{3) Valor: 3 pontos. Solução}}
+a) Seja cada segmento retilíneo da trajetória do estudante indicado por um vetor como está na figura \ref{vetores4b}. O vetor deslocamento total é a soma vetorial $\vec{D} = \vec{A} + \vec{B}+\vec{C}$. O módulo do deslocamento total é $D = \vert \vec{D} \vert$. Em termos de componentes temos:
+\begin{eqnarray}
+D_x &=& A_x +B_x +C_x \label{componxD} \\
+D_y &=& A_y +B_y +C_y \label{compoyDs}
+\end{eqnarray}
+Da figura, os módulos dos vetores são: $\vert \vec{A} \vert = A=$ 2,6 km, $\vert \vec{B} \vert = B=$ 4,0 km e $\vert \vec{C} \vert = C=$ 3,1 km. Seja o sistema $xy$ tal que $\vec{A} = A_y \hat{j}$ e $\vec{B} = B_x \hat{i}$, logo $A = A_y$ e $B = B_x$ (veja figura \ref{vetores4b}). Como $\vec{A}$ está na direção $y$, significa que não há componente na direção $x$. Da mesma forma $\vec{B}$ está na direção $x$ e não tem componente em $y$. Logo: $A_x = B_y = 0$. 
+
+Resta então encontrar as componentes de $\vec{C} = \hat{i} C_x + \hat{j} C_y$. O ângulo que $\vec{C}$ faz com o eixo $x$ é $\theta =$ 45 graus $=\pi/4$ radianos. Da figura \ref{tri1}, as componentes são: $C_x = C \cos \theta = 3,1 \times \cos \pi/4 \simeq 2,2$ km  e $C_y = C\sin \theta = 3,1 \times \sin \pi/4 \simeq 2,2$ km. 
+
+%\begin{figure}[!h]
+%\centering
+%\subfigure{a)
+%\includegraphics[width=2.7 in]{vetores4b.pdf}
+%\label{vetores4b}
+%}
+%\subfigure{b)
+%\includegraphics[width=1.8 in]{tri1.pdf}
+%\label{tri1}
+%}
+%\caption{\subref{vetores4b} Sistema de coordenadas $xy$ escolhido mostrando os vetores $\vec{A}$, $\vec{B}$ e $\vec{C}$. \subref{tri1} Triângulo retângulo para cálculo das componentes de $\vec{C}$.}
+%\end{figure}
+
+\begin{figure}[!h]
+\centering
+\subfigure{a)
+\begin{tikzpicture}
+  \draw[thin,gray!40] (-1,-1) grid (5.0,3.0);
+  \draw[<->] (-1,0)--(5,0) node[above]{$x$};
+  \draw[<->] (0,-1)--(0,3) node[left]{$y$};
+%  \draw[line width=2pt,blue,-stealth](0,0)--(0,2.6) node[anchor=south]{$\vec{A}$};
+  \draw[line width=2pt,blue,-stealth](0,0)--(0,2.6) node[right]{$\vec{A}$};
+  \draw[line width=2pt,red,-stealth](0,0)--(4,0) node[above]{$\vec{B}$};
+  \draw[line width=2pt,black,-stealth](0,0)--(2.2,2.2) node[anchor=south west]{$\vec{C}$};
+\end{tikzpicture}
+\label{vetores4b}
+}
+\subfigure{b)
+\begin{tikzpicture}[thick]
+\coordinate (O) at (0,0);
+\coordinate (A) at (2.2,0);
+\coordinate (B) at (2.2,2.2);
+\draw (O)--(A)--(B)--cycle;
+
+\tkzLabelSegment[below=2pt](O,A){$C_x$}
+\tkzLabelSegment[left=2pt](O,B){$C$}
+\tkzLabelSegment[above right=2pt](A,B){$C_y$}
+
+\tkzMarkRightAngle[fill=orange,size=0.5,opacity=.4](O,A,B)% square angle here
+\tkzLabelAngle[pos = 0.35](O,A,B){\begin{tiny}
+$\pi/2$
+\end{tiny}}
+
+\tkzMarkAngle[fill= orange,size=0.8cm,opacity=.4](A,O,B)
+\tkzLabelAngle[pos = 0.6](A,O,B){$\theta$}
+
+%\tkzMarkAngle[fill= orange,size=0.7cm,opacity=.4](O,B,A)
+%\tkzLabelAngle[pos = 0.5](O,B,A){$\pi/4$}
+\end{tikzpicture}
+\label{tri1}
+}
+\caption{\subref{vetores4b} Sistema de coordenadas $xy$ escolhido mostrando os vetores $\vec{A}$, $\vec{B}$ e $\vec{C}$. \subref{tri1} Triângulo retângulo para cálculo das componentes de $\vec{C}$.}
+\end{figure}
+
+Agora podemos calcular as componentes de $\vec{D}$ usando as Eqs. \ref{componxD} e \ref{compoyDs}:
+\begin{equation}
+D_x = 0 + 4,0 + 2,2 = 6,2 \quad \text{km}, \qquad  D_y= 2,6 + 0 + 2,2 = 4,8 \quad \text{km}.
+\end{equation}
+O deslocamento total será:
+\begin{equation}
+D = \vert \vec{D} \vert = \sqrt{D_x^2 + D_y^2} = \sqrt{(6,2)^2 + (4,8)^2} \simeq 7,8 \quad \text{km}.
+\end{equation} 
+
+b) O comprimento total percorrido pelo aluno é o comprimento da trajetória, que é igual a soma dos módulos dos vetores:
+\begin{equation}
+L = A + B + C = 2,6 + 4,0 + 3,1 = 9,7 \quad \text{km}. 
+\end{equation}
+
+c) O vetor deslocamento resultante é:
+\begin{equation}
+\vec{D} = (D_x,D_y) = (6,2;4,8) = (6,2\text{km})\hat{i} + (4,8\text{km})\hat{j}
+\end{equation}
+
+
+
+\vspace{0.1 in}
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+{\color{red}\textbf{4) Valor: 3 pontos. Solução}}
+a)Seja altura da nuvem $H =$ 500 metros. Considerando a gota em queda livre temos um movimento uniformemente variado (MUV). Logo a posição e a velocidade em função do tempo são:
+\begin{eqnarray}
+y(t) &=& y_0 + v_0 t + \frac{1}{2}at^2 \label{sjwjwjwjwj} \\
+v(t) &=& v_0 + at \label{esksjwkjw}
+\end{eqnarray}
+Vamos considerar o eixo $y$ voltado para baixo de forma que a aceleração fique positiva: $a = g = 9,8$ m/s$^2$. Escolhemos ainda o ponto de partida como sendo o repouso: $y_0 = 0$. Como trata-se de queda livre a velocidade inicial é nula: $v_0 = 0$. 
+
+Da Eq. \ref{esksjwkjw} a velocidade final é: $v(t_q) = gt_q$ onde $t_q$ é o tempo total de queda. Da Eq. \ref{sjwjwjwjwj}: $y(t_q) = H = (g t_q^2 )/2$. Logo, isolando o tempo: $t_q = \sqrt{2H/g}$. Agora podemos calcular a velocidade final:
+\begin{equation}
+v(t_q) = gt_q = g \sqrt{\dfrac{2H}{g}} = 9,8 \sqrt{\dfrac{2 \times 500}{9,8}} \simeq  99 \quad \text{m/s}
+\end{equation} 
+
+b) Com base na minha experiência pessoal, eu diria que uma gota percorre uma distância de 5 metros em um segundo logo antes de atingir o solo, o que dá uma velocidade de 5 m/s. Esse valor é muito menor do que o valor calculado no item a).
+
+c) Dado a grande discrepância entre os valores dos itens a) e b), desprezar a resistência do ar não é uma boa aproximação para a queda das gotas da chuva.
+
+
+
+ 
+\end{document}
+
+
+
