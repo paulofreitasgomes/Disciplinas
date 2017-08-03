@@ -1,0 +1,205 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%opcao 2 para acertar as margens
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }  % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+%alinhar o texto
+\usepackage[document]{ragged2e}
+
+\begin{document}
+
+
+
+
+%\includepdf{docs_ABCDE.pdf}
+%
+%\includepdf{f1.pdf}
+
+\subsection*{Jataí, 18/11/16. Universidade Federal de Goiás - Regional Jataí.}
+
+\subsection*{Curso: Física. Eletromagnetismo. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.2 in}
+\noindent
+%Aluno: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_\_
+Nome: \noindent\rule{11cm}{0.5pt}. Matrícula: \noindent\rule{2cm}{0.4pt}
+
+\vspace{0.1 in}
+\begin{small}
+Prezado aluno, seja didático e organizado. Explique os pontos importantes de sua solução e use quantas folhas forem necessárias. Lembre-se dos objetivos: (1) fazer o que foi pedido; (2) mostrar ao corretor que você tem o conhecimento necessário para o objetivo (1). Ao terminar sua prova, faça uma pequena revisão. Boa sorte!
+\end{small}
+
+\begin{center}
+\noindent\rule{5cm}{0.4pt}
+\end{center}
+
+
+\vspace{0.1 in}
+
+\noindent
+1) A solução genérica em coordenadas esféricas $(r,\theta)$ para o potencial elétrico da Eq. de Laplace, considerando um potencial independente de $\phi$, é: 
+\begin{equation}
+ V (r,\theta) = \left\{
+\begin{array}{rl}
+ V_d (r,\theta) = \sum\limits_{n=0}^{\infty} A_n r^n P_n (\cos \theta) & \text{se  } r \leq R  \\
+\\
+V_f (r,\theta) =\sum\limits_{n=0}^{\infty} \dfrac{B_n}{r^{n+1}} P_n (\cos \theta)  & \text{se  } r \geq R
+\end{array} 
+\right.,
+ \nonumber 
+\end{equation}
+onde $V_d$ e $V_f$ são o potencial dentro e fora da esfera. Considere uma esfera de raio $R$ cujo potencial na superfície é dado por:
+\begin{equation}
+V_0 (\theta) = k \cos 3 \theta = \dfrac{k}{5} \left[ 8P_3 (\cos \theta ) - 3 P_1 (\cos \theta ) \right] 
+\nonumber
+\end{equation}
+onde $k$ é uma constante e $P_1 (\cos \theta ) = \cos \theta$ e $P_3 (\cos \theta ) = \frac{1}{2} ( 5\cos^3 \theta - 3\cos \theta )$ são os polinômios de Legendre de ordem 1 e 3. 
+
+a) Mostre que, no caso geral, os coeficientes $A_n$ são dados por:
+\begin{equation}
+A_n  =  \dfrac{2n+1}{2R^n} \int_0^{\pi} V_0(\theta) P_n (\cos \theta) \sin \theta d\theta. \nonumber
+\end{equation}
+Dica: escreva a continuidade da expressão do potencial dentro da esfera $V_d (r,\theta)$ para $r=R$. Multiplique por $\int_0^{\pi} P_q(\cos \theta) \sin \theta d\theta$ em ambos os lados e use a condição de conjunto completo dos polinômios de Legendre.
+
+b) Mostre que os coeficientes do potencial fora da esfera podem ser escritos como:
+\begin{equation}
+B_n = A_n R^{2n+1}. \nonumber
+\end{equation}
+Dica 1: Escreva a relação de continuidade envovendo $V_d (r,\theta)$ e $V_f (r,\theta)$ em $r=R$. Dica 2: quando duas séries de polinômios de Legendre são iguais, é por que os respectivos coeficientes de $P_n(\cos \theta)$ são iguais.
+ 
+c) Mostre que o potencial em todo o espaço é: 
+\begin{equation}
+V (r,\theta) = \left\{
+\begin{array}{rl}
+ -\dfrac{3k}{5R} r P_1 (\cos \theta ) + \dfrac{8k}{5R^3} r^3 P_3 (\cos \theta ) & \text{se  } r \leq R  \\
+\\
+ -\dfrac{3kR^2}{5r^2}  P_1 (\cos \theta ) + \dfrac{8kR^4}{5r^4} P_3 (\cos \theta )  & \text{se  } r \geq R
+\end{array} 
+\right. \nonumber
+\end{equation}
+d) A densidade de carga pode ser encontrada através das condições de contorno do potencial:
+\begin{equation}
+ \left(  \dfrac{\partial V_d }{\partial u}- \dfrac{\partial V_f }{\partial u} \right)\biggr\rvert_S   = -\dfrac{\sigma(\theta)}{\varepsilon_0},
+\end{equation}
+onde $u$ é a coordenada cuja direção é perpendicular a superfície onde está a densidade de carga. O símbolo $\biggr\rvert_S$ significa que a expressão entre parênteses deve ser avaliada na superfície em questão. Assumindo que não há carga nem dentro nem fora da esfera, mostre que a densidade de carga na superfície é:
+\begin{equation}
+\sigma (\theta) = \dfrac{\varepsilon_0 k}{5R} \left[ 56 P_3 (\cos \theta )-9 P_1 (\cos \theta ) \right]. \nonumber
+\end{equation}
+
+
+\begin{center}
+\noindent\rule{12cm}{0.5pt}
+\end{center}
+
+
+\noindent
+2) Uma esfera de raio $R$, centrada na origem, carrega uma densidade de carga dada por:
+\begin{equation}
+\rho (r,\theta) = k \dfrac{R}{r^2} (R - 2r) \sin \theta,  \nonumber
+\end{equation}
+onde $k$ é uma constante. 
+
+a) Mostre que o termo de monopolo da expansão de multipolos para o potencial elétrico desta distribuição é zero. 
+
+b) Mostre que o termo de dipolo também é zero. 
+
+c) Mostre que o termo de quadrupolo é:
+\begin{equation}
+V_q(r) = \dfrac{1}{4\pi \varepsilon_0 r} \dfrac{k \pi^2 R^5}{48}.  \nonumber
+\end{equation}
+
+
+\textbf{Fórmulas para consulta}
+
+ \begin{equation}
+ \int \sin^2 \theta \cos \theta d\theta = \frac{1}{3} \sin^3 \theta, \quad \quad \int_0^{\pi} (3 \cos^2 \theta - 1) \sin^2 \theta d\theta = - \dfrac{\pi}{8} \nonumber 
+\end{equation} 
+
+ \vspace{0.1 in}
+
+ 
+\begin{equation}
+ \int_0^{\pi} P_n  (\cos \theta ) P_m  (\cos \theta ) \sin \theta d\theta  = \left\{
+\begin{array}{rl}
+ 0& \text{se  } n \neq m  \\
+\\
+ \dfrac{2}{2n+1}& \text{se  } n = m
+\end{array} 
+\right.
+ \nonumber 
+\end{equation}
+ \vspace{0.1 in}
+ 
+\begin{equation}
+V(\vec{r}) = \dfrac{1}{4\pi \varepsilon_0} \sum_{n=0}^{\infty} \dfrac{1}{r^{n+1}} \int (r')^n P_n (\cos \theta) \rho({\vec{r}\,}')d\tau'  \nonumber 
+\end{equation} 
+
+\vspace{0.2 in}
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+\vspace{0.5 in}
+
+\begin{flushright}
+\begin{small}
+\textit{O inconveniente das pessoas é a esperança de encontrar soluções fáceis. Sem dificuldade não há desafios. Sem desafios não há mérito, a vida é uma rotina. É na crise que aparece o melhor de cada um. Falar de crise é promovê-la, calar-se é exaltar o conformismo. Em vez disso, trabalhemos duro. A única crise ameaçadora é a tragédia de não querer superá-la.}  
+
+Albert Einstein.
+\end{small}
+\end{flushright}
+
+ 
+\end{document}
+
+
+

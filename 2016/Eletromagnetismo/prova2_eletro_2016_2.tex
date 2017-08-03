@@ -1,0 +1,131 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{graphicx,color}
+
+
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%opcao 2 para acertar as margens
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }  % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+%alinhar o texto
+\usepackage[document]{ragged2e}
+
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+
+\begin{document}
+
+
+
+\subsection*{Jataí, 09/12/16. Curso: Física. UFG - Jataí.}
+
+\subsection*{ Prova 2. Eletromagnetismo. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.2 in}
+\noindent
+Nome: \noindent\rule{11cm}{0.5pt} Matrícula: \noindent\rule{2cm}{0.4pt}
+
+%\vspace{0.1 in}
+
+\noindent
+1) a) Considere um disco de raio $R$ e com uma densidade de carga elétrica estática $\sigma$ girando com uma velocidade angular $\omega$. Calcule a densidade de corrente superficial $\vec{K}$ em uma distância $s$ do centro. b) Encontre o campo mangético em um ponto $z>R$ no eixo de simetria do disco.
+
+
+\vspace{0.1 in}
+\noindent
+2) a) Considere duas espiras 1 e 2, como na figura \ref{figura1}. Mostre que a força que a espira 2 sente devido a espira 1 é:
+\begin{equation}
+\vec{F}_2 = - \dfrac{\mu_0}{4\pi} I_1 I_2 \oint\displaylimits_{C_2} \oint\displaylimits_{C_1} \dfrac{ \hat{\rcurs} }{\rcurs^2} d\vec{l}_1 \cdot d\vec{l}_2 \nonumber
+\end{equation}
+b) A força magnética entre dois circuitos obedece a terceira Lei de Newton? Por que?
+
+
+
+\noindent
+3) Um cilindro longo circular de raio $R$ tem uma magnetização $\vec{M} = ks^3 \hat{\phi}$, onde $k$ é uma constante, $s$ é a distância até o eixo de simetria e $\hat{\phi}$ é o versor unitário azimutal (veja figura \ref{cilindro}). Encontre o campo magnético criado pela magnetização em todo o espaço.
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.4 in]{figuras/figura1.png}
+\label{figura1}
+}
+\subfigure{b)
+\includegraphics[width=1.9 in]{figuras/cilindro.png}
+\label{cilindro}
+}
+\caption{\subref{figura1} Espiras 1 e 2. \subref{cilindro} Cilindro.}
+\end{figure}
+
+
+
+\begin{flushright}
+\begin{small}
+\textit{ O mundo não é apenas sol e arco-íris. É um lugar maldoso e asqueroso e não importa quão forte você seja, ele vai te bater até você ficar de joelhos e te deixar assim enquanto você permitir. Você, eu, e ninguém mais, irá bater tão forte quanto a vida. Mas o importante não é o quão forte você consegue bater. O importante é o quão forte você consegue aguentar e continuar andando de cabeça erguida. Isso é vitória. Se você sabe o seu valor, então corra atrás disso. Mas você tem que querer aguentar as pancadas da vida, e não apontar dedos culpando os outros. Covardes fazem isso e você não é um covarde. Você é melhor que isso.  
+}  
+
+Rocky Balboa
+\end{small}
+\end{flushright}
+
+ 
+\end{document}
+
+
+

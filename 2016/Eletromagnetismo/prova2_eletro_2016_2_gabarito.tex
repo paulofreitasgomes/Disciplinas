@@ -1,0 +1,352 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{graphicx,color}
+
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%define as palavras que vao no cabecalho, mais sofisticado que o anterior
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{Seção \thesection }
+%\rhead{\rightmark} %\rightmark = current section, and \leftmark is current chapter
+\lhead{Paulo Freitas Gomes. UFG - Jataí.}
+\rfoot{\thepage}
+
+
+%opcao 2 para acertar as margens
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }  % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+%alinhar o texto
+\usepackage[document]{ragged2e}
+
+\usepackage{tikz,tikz-3dplot}
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\section*{Jataí, 09/12/16. Curso: Física. UFG - Jataí.}
+
+\section*{ Prova 2. Eletromagnetismo. Prof. Paulo Freitas Gomes.}
+
+
+
+\vspace{0.2 in}
+\noindent
+Nome: \noindent\rule{11cm}{0.5pt} Matrícula: \noindent\rule{2cm}{0.4pt}
+
+%\vspace{0.1 in}
+
+\noindent
+1) a) Considere um disco de raio $R$ e com uma densidade de carga elétrica estática $\sigma$ girando com uma velocidade angular $\omega$. Calcule a densidade de corrente superficial $\vec{K}$ em uma distância $s$ do centro. b) Encontre o campo mangético em um ponto $z>R$ no eixo de simetria do disco.
+
+
+\vspace{0.1 in}
+\noindent
+2) a) Considere duas espiras 1 e 2, como na figura \ref{figura1}. Mostre que a força que a espira 2 sente devido a espira 1 é:
+\begin{equation}
+\vec{F}_2 = - \dfrac{\mu_0}{4\pi} I_1 I_2 \oint\displaylimits_{C_2} \oint\displaylimits_{C_1} \dfrac{ \hat{\rcurs} }{\rcurs^2} d\vec{l}_1 \cdot d\vec{l}_2 \nonumber
+\end{equation}
+b) A força magnética entre dois circuitos obedece a terceira Lei de Newton? Por que?
+
+
+
+\noindent
+3) Um cilindro longo circular de raio $R$ tem uma magnetização $\vec{M} = ks^3 \hat{\phi}$, onde $k$ é uma constante, $s$ é a distância até o eixo de simetria e $\hat{\phi}$ é o versor unitário azimutal (veja figura \ref{cilindro}). Encontre o campo magnético criado pela magnetização em todo o espaço.
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.2 in]{figuras/figura1.png}
+\label{figura1}
+}
+\subfigure{b)
+\includegraphics[width=1.9 in]{figuras/cilindro.png}
+\label{cilindro}
+}
+\caption{\subref{figura1} Espiras 1 e 2. \subref{cilindro} Cilindro.}
+\end{figure}
+
+
+
+\begin{flushright}
+\begin{small}
+\textit{ O mundo não é apenas sol e arco-íris. É um lugar maldoso e asqueroso e não importa quão forte você seja, ele vai te bater até você ficar de joelhos e te deixar assim enquanto você permitir. Você, eu, e ninguém mais, irá bater tão forte quanto a vida. Mas o importante não é o quão forte você consegue bater. O importante é o quão forte você consegue aguentar e continuar andando de cabeça erguida. Isso é vitória. Se você sabe o seu valor, então corra atrás disso. Mas você tem que querer aguentar as pancadas da vida, e não apontar dedos culpando os outros. Covardes fazem isso e você não é um covarde. Você é melhor que isso.  
+}  
+
+Rocky Balboa
+\end{small}
+\end{flushright}
+
+\newpage
+
+\section*{{\color{red}Gabarito}}
+
+\noindent
+{\color{red}1a) Valor: 1 ponto.} A definição de densidade superficial de corrente é: $\vec{K} = \dfrac{d \vec{I}}{dl_{\perp}} = \sigma \vec{v}$, onde $\vec{v}$ é a velocidade em função de $r$ de cada ponto no disco. Dado o movimento do disco, qualquer ponto nele terá uma velocidade na direção $\vec{v} = v\hat{\phi}$ ($\phi$ é coordenada cilíndrica angular, considerando o plano do disco no plano $xy$). Logo $\vec{K} = \sigma v\hat{\phi}$ (veja figura \ref{coordenadascilindricas}). Como cada ponto no disco executa um movimento circular de raio $r$ temos que $v = \omega r$, logo:
+\begin{equation}
+\vec{K} = {\color{blue}\boxed{\sigma \omega r \hat{\phi} }} \nonumber
+\end{equation}
+
+ \vspace{0.1 in}
+
+{\color{red}1b) Valor: 2 pontos} Vou usar o resultado do campo magnético criado por uma espira ao longo do eixo da mesma:
+\begin{equation}
+\vec{B}_e = \dfrac{\mu_0 IR^2}{2 (R^2+z^2)^{3/2}} \hat{z}  \nonumber
+\end{equation}
+O campo total distando $z$ do disco será então a soma dos campos de cada espira diferencial: $\vec{B} = \int_0^R d\vec{B}_e$. Como $\vec{B}_e$ está no eixo $z$, o campo resultante do disco também será ao longo de $z$: $\vec{B} =  \hat{z} \int_0^R dB_e$. A variável de integração será a grandeza extensiva na expressão de $B_e$, que no caso é a corrente:
+\begin{equation}
+dB_e = \dfrac{\mu_0 R^2}{2 (R^2+z^2)^{3/2}} dI \nonumber
+\end{equation} 
+A corrente será:
+\begin{equation}
+dI = \dfrac{dq}{T} = \dfrac{\sigma da}{T} = \dfrac{2\pi r \sigma dr}{2\pi / \omega} = \sigma \omega r dr \nonumber
+\end{equation}
+O elemento diferencial de carga $dq = \sigma da$ está na espessura da espira, como ilustrado na figura \ref{espira}. Juntando as duas últimas equações temos:
+\begin{equation}
+\vec{B} = \hat{z} \int_0^R dB_e = \hat{z} \int_0^R  \dfrac{\mu_0 r^2}{2 (R^2+z^2)^{3/2}}  \sigma \omega r dr =   \frac{1}{2} \mu_0 \sigma \omega  \int_0^R  \dfrac{r^3}{ (r^2+z^2)^{3/2}} dr \hat{z} \nonumber
+\end{equation}
+Para fazer a integral fazemos a troca de variáveis $u = r^2$ e $du = 2rdr$. Logo:
+\begin{eqnarray}
+\vec{B} &=& \hat{z} \frac{1}{4} \mu_0 \sigma \omega  \int_0^{R^2}  \dfrac{udu}{ (u+z^2)^{3/2}} = \hat{z} \frac{1}{4} \mu_0 \sigma \omega \left[ 2 \left( \dfrac{u + 2z^2}{ \sqrt{u + 2z^2}} \right) \right] \biggr\rvert_0^{R^2} \nonumber \\
+&=& {\color{blue}\boxed{ \frac{1}{2} \mu_0 \sigma \omega \left[   \dfrac{R^2 + 2z^2}{ \sqrt{R^2 + z^2}} -2z \right] \hat{z}}} \nonumber
+\end{eqnarray}
+
+ \vspace{0.1 in}
+ 
+\begin{center}
+\noindent\rule{5cm}{0.4pt}
+\end{center}
+
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.2 in]{figuras/espira.png}
+\label{espira}
+}
+\subfigure{b)
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[tdplot_main_coords][scale=0.75]
+\tikzstyle{every node}=[font=\LARGE]
+\draw[thick,-latex] (0,0,0) -- (5,0,0) node[anchor=north east]{$x$};
+\draw[thick,-latex] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\draw[thick,-latex] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
+%\filldraw[fill=blue, nearly transparent] (0,0,4) -- (5.2,6,4) --  (5.2,6,0) -- (0,0,0) -- (0,0,4);
+\filldraw[fill=red, nearly transparent] (0,0,4) -- (5.2,6,4) --  (5.2,6,0) -- (0,0,0) -- (0,0,4);
+\filldraw [color=black](2,2.25,4) circle (0.075cm);
+\node at (0.5,0,4.2) {$z$};
+\node at (1.8,2.2,5) {$\hat{z}$};
+\node at (1.8,3.3,4.6) {$\hat{\phi}$};
+\node at (1.8,3.0,3.7) {$\hat{s}$};
+\draw[ultra thick,-latex, color = blue](2,2.25,4) -- (3,3.45,4);
+\draw[ultra thick,-latex, color = blue](2,2.25,4) -- (1,2.5,4);
+\draw[ultra thick,-latex, color = blue](2,2.25,4) -- (2,2.25,4.75);
+\draw [thick,->](4,0,0) arc (0:45:4 and 4.5);
+\draw (3.6,2,0) node[anchor=north] {$\phi$};
+\draw[ultra thick,-latex, color = blue](0,0,0) -- (2,2.35,0);
+\draw (1,1,0) node[anchor=north] {$s$};
+\draw [ultra thick, color = blue] (2,2.25,4)--(1.95,2.25,0);
+\end{tikzpicture}
+\label{coordenadascilindricas}
+}
+\caption{\subref{espira} Espira e o elemento de área para o cálculo de $dI$. \subref{coordenadascilindricas} Sistema de coordenadas cilíndricas.}
+\end{figure}
+
+ 
+ 
+\noindent
+{\color{red}2a) Valor: 3 pontos} A força magnética que a espira 2 sente é:
+\begin{equation}
+\vec{F}_2 = \int I_2 d\vec{l}_2 \times \vec{B}_1  \nonumber 
+\end{equation} 
+onde $\vec{B}_1$ é o campo gerado pela espira 1, dado pela lei de Biot Savart:
+\begin{equation}
+\vec{B}_1 = \dfrac{\mu_0 I_1}{4\pi} \int \dfrac{d\vec{l}_1 \times \hat{\rcurs}}{\rcurs^2}  \nonumber 
+\end{equation}
+Usando a expressão de $\vec{B}_1$ a força fica:
+\begin{equation}
+\vec{F}_2 = \dfrac{\mu_0 }{4\pi} \int I_2 d\vec{l}_2 \times \int I_1 \dfrac{d\vec{l}_1 \times \hat{\rcurs}}{\rcurs^2} = \dfrac{\mu_0 }{4\pi} I_1 I_2 \iint \dfrac{d \vec{l}_2 \times d \vec{l}_1 \times \hat{\rcurs}}{\rcurs^2} \nonumber 
+\end{equation}
+Usando propriedade $\vec{A} \times \vec{B} \times \vec{C} = \vec{B} (\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B})$ podemos abrir o integrando:
+\begin{equation}
+d \vec{l}_2 \times d \vec{l}_1 \times \hat{\rcurs} = d \vec{l}_1 (d \vec{l}_2 \cdot \hat{\rcurs}) - \hat{\rcurs} (d \vec{l}_1 \cdot d \vec{l}_2)   \nonumber 
+\end{equation} 
+ A força fica então:
+\begin{equation}
+\vec{F}_2 = \dfrac{\mu_0 }{4\pi} I_1 I_2 \Gamma - \dfrac{\mu_0 }{4\pi} I_1 I_2 \iint \dfrac{\hat{\rcurs} (d \vec{l}_1 \cdot d \vec{l}_2)}{\rcurs^2}  \nonumber 
+\end{equation}
+onde:
+\begin{equation}
+\Gamma =  \iint \dfrac{d \vec{l}_1 (d \vec{l}_2 \cdot \hat{\rcurs})}{\rcurs^2} = \oint d\vec{l}_1 \oint \dfrac{\hat{\rcurs}}{\rcurs^2} \cdot d\vec{l}_2 \label{wjwjwuwiiooo}
+\end{equation}
+Temos que $\Gamma = 0$, logo a força na espira 2 é:
+\begin{equation}
+\vec{F}_2 = {\color{blue}\boxed{- \dfrac{\mu_0 }{4\pi} I_1 I_2 \iint \dfrac{\hat{\rcurs}}{\rcurs^2} d \vec{l}_1 \cdot d \vec{l}_2 }} \label{forcadkwkwl}
+\end{equation} 
+como desejado mostrar. 
+
+Resta agora mostrar que de fato $\Gamma = 0$. Primeiro, vou reescrever o vetor $\dfrac{\hat{\rcurs}}{\rcurs^2}$ na forma de um gradiente. Temos que:
+\begin{equation}
+\vec{\nabla}_2 \dfrac{1}{\rcurs} = \left( \hat{i}\dfrac{\partial }{\partial x_2} + \hat{j}\dfrac{\partial }{\partial y_2} + \hat{k}\dfrac{\partial }{\partial z_2} \right) \dfrac{1}{\rcurs} \label{skljwjwk}
+\end{equation}
+O vetor separação é dado por:
+\begin{eqnarray}
+\vec{\rcurs} &=& \vec{r}_2 - \vec{r}_1 = (x_2-x_1)\hat{i} + (y_2-y_1)\hat{j} + (z_2-z_1)\hat{k}  \nonumber  \\
+\rcurs^2 &=& (x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2  \nonumber 
+\end{eqnarray}
+Calculando cada derivada parcial temos:
+\begin{eqnarray}
+\dfrac{\partial }{\partial x_2} \left(  \dfrac{1}{\rcurs} \right)  &=& \dfrac{\partial }{\partial x_2} \left\lbrace \left[ (x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2\right]^{-1/2} \right\rbrace   = -\frac{1}{2} \dfrac{1}{\rcurs^3} 2(x_2-x_1)  \nonumber \\
+ &=& - \dfrac{x_2-x_1}{\rcurs^3} \nonumber 
+\end{eqnarray}
+Analogamente temos para as outras coordenadas:
+\begin{eqnarray}
+\dfrac{\partial }{\partial y_2} \left( \dfrac{1}{\rcurs} \right)  &=& -\dfrac{y_2-y_1}{\rcurs^3}  \nonumber  \\
+\dfrac{\partial }{\partial z_2} \left( \dfrac{1}{\rcurs} \right)  &=& -\dfrac{z_2-z_1}{\rcurs^3}  \nonumber 
+\end{eqnarray}
+O gradiente da Eq. \ref{skljwjwk} fica então:
+\begin{eqnarray}\vec{\nabla}_2 \dfrac{1}{\rcurs} &=& -\dfrac{1}{\rcurs^3} \left[ (x_2-x_1)\hat{i} + (y_2-y_1)\hat{y} + (z_2-z_1)\hat{k} \right] = -\dfrac{\vec{\rcurs}}{\rcurs^3}  \nonumber  \\
+&=&   -\dfrac{\hat{\rcurs}}{\rcurs^2}  \nonumber 
+\end{eqnarray}
+Usando este resultado na Eq. \ref{wjwjwuwiiooo} teremos então:
+\begin{equation}
+\Gamma = - \oint d\vec{l}_1 \oint d\vec{l}_2 \cdot \vec{\nabla}_2 \dfrac{1}{\rcurs} \label{sjwuwywhsjwu}
+\end{equation}
+Mas o Teorema fundamental do cálculo diz que:
+\begin{equation}
+\int_{\vec{a}}^{\vec{b}} (\vec{\nabla} T) \cdot d\vec{l} = T(\vec{b}) - T(\vec{a}) \nonumber 
+\end{equation}
+Se aplicarmos este teorema na segunda integral da Eq. \ref{sjwuwywhsjwu} teremos:
+\begin{equation}
+\oint d\vec{l}_2 \cdot \vec{\nabla}_2 \dfrac{1}{\rcurs} = \dfrac{1}{\rcurs}\biggr\rvert_{\vec{r}_f} - \dfrac{1}{\rcurs}\biggr\rvert_{\vec{r}_i} =  \dfrac{1}{\rcurs}\biggr\rvert_{\vec{r}_f} - \dfrac{1}{\rcurs}\biggr\rvert_{\vec{r}_i} = 0 \nonumber 
+\end{equation} 
+onde $\vec{r}_f$ e $\vec{r}_i$ são as posições final e inicial. Porém, como trata-se de uma integral fechada $\oint$, temos que $\vec{r}_f = \vec{r}_i$. Esta integral sendo zero, a Eq. \ref{sjwuwywhsjwu} implica que $\Gamma = 0$, como queríamos demonstrar.
+
+ \vspace{0.1 in}
+ 
+{\color{red}2b) Valor: 1 ponto} A Terceira Lei de Newton forte diz que a força de um objeto 1 sobre outro objeto 2 tem mesmo módulo e direção porém sentido contrário que a força do objeto 2 sobre o 1: $\vec{F}_1 = -\vec{F}_2$. A força da espira 1 na espira 2 é dada pela Eq. \ref{forcadkwkwl}. Analogamente a força da espira 2 na espira 1 é obtida trocando as seguintes variáveis: $I_1$ por $I_2$, $d\vec{l}_1$ por $d\vec{l}_2$ e vice-versa. Já o vetor separação inverte o sinal, pois a direção continua a mesma e apenas o sentido é alterado: $\hat{\rcurs} \rightarrow -\hat{\rcurs}$. Fazendo essas alterações na Eq. \ref{forcadkwkwl} temos:
+\begin{equation}
+\vec{F}_1 = {\color{blue}\boxed{+ \dfrac{\mu_0 }{4\pi} I_2 I_1 \iint \dfrac{ \hat{\rcurs}}{\rcurs^2} d \vec{l}_2 \cdot d \vec{l}_1 }} \label{forcadeeeee}
+\end{equation} 
+Das Eqs. \ref{forcadkwkwl} e \ref{forcadeeeee} conclui-se que $\vec{F}_1 = -\vec{F}_2$, satisfazendo portanto a Terceira Lei de Newton.
+
+
+ \vspace{0.1 in}
+ 
+\begin{center}
+\noindent\rule{5cm}{0.4pt}
+\end{center}
+
+
+ 
+ {\color{red}3) Valor: 3 pontos} Dado a simetria do problema, usaremos coordenadas cilíndricas $(s,\phi,z)$, veja figura \ref{coordenadascilindricas}. O campo magnético pode ser calculado tanto pela Lei de Biot-Savart quanto pela Lei de Ampére. A simetria espacial da densidade de corrente irá determinar qual lei é mais adequada. A densidade volumétrica de corrente criada pela magnetização $\vec{M} = k s^3 \hat{\phi} = M_{\phi} \hat{\phi} $ será:
+ \begin{eqnarray}
+ \vec{J}_b &=& \vec{\nabla} \times \vec{M} = - \dfrac{\partial M_{\phi}}{\partial z} \hat{s} + \dfrac{1}{s} \dfrac{\partial   }{\partial s} \left( s M_{\phi} \right) \hat{z} = \dfrac{k}{s} \dfrac{\partial s^4 }{\partial s} \hat{z} \nonumber \\
+ &=& 4ks^2 \hat{z}
+ \end{eqnarray}
+ Já a densidade superficial de corrente será:
+ \begin{equation}
+ \vec{K}_b = \vec{M} \times \hat{n} = ks^3 \hat{\phi} \times \hat{s} = - kR^3 \hat{z}   \label{ewjwjwjwjwj}
+ \end{equation}
+ Há então uma densidade volumétrica de corrente $\vec{J}_b$ subindo e uma densidade superficial $\vec{K}_b$ descendo. A corrente volumétrica tem simetria radial e assim podemos usar a Lei de Ampére para calcular o campo criado dentro do cilindro. A Lei de Ampére é escrita como:
+ \begin{equation}
+ \oint\displaylimits_C \vec{B}_d \cdot d\vec{l} = \mu_0 I_c  \label{leideamperess}
+\end{equation}  
+onde $I_c$ é a corrente total que atravessa a amperiana $C$ e $\vec{B}_d = \vec{B}(s<R)$ é o campo dentro do cilindro. Consideremos uma amperiana genérica de raio $s_1 < R$. Como a corrente está subindo, pela regra da mão direita, o campo estará na direção $\hat{\phi}$, paralelo ao elemento de comprimento $d\vec{l} = dl \hat{\phi}$ (veja figura \ref{cilindro}). O lado direito da Lei de Ampére (Eq. \ref{leideamperess}) será:
+\begin{equation}
+ \oint\displaylimits_C \vec{B}_d \cdot d\vec{l} =  \oint B_d dl =  B_d \oint  dl = 2\pi s_1 B_d  \label{smsmsmsnnn}
+\end{equation}
+A corrente englobada será:
+\begin{equation}
+I_c(s_1) = \int \vec{J}_b \cdot d\vec{a} = \int J_b da \hat{z} \cdot \hat{z}= \int_0^{s_1} sds \int_0^{2\pi} d\phi 4ks^2 = 2\pi 4k \int_0^{s_1} s^3 ds = 2k\pi s_1^4  \label{skwjwuwhwh}
+\end{equation}
+onde o elemento de área em coordenadas cilíndricas é $da = s ds d\phi$. Substituindo as Eqs. \ref{smsmsmsnnn} e \ref{skwjwuwhwh} na Eq. \ref{leideamperess}, o campo dentro do cilindro será:
+\begin{equation}
+\vec{B}_d = \mu_0 \dfrac{2k \pi s^4}{2\pi s} \hat{\phi} =  \mu_0 k s^3 \hat{\phi} = \mu_0 \vec{M}  \nonumber
+\end{equation}
+onde trocamos $s_1$ por $s$.
+ 
+Para o cálculo do campo fora do cilindro, precisamos da corrente superficial também. É de se esperar que a corrente total devida à magnetização apenas seja nula, já que a magnetização não cria corrente elétrica, apenas redistribui as correntes microscópicas. A corrente total é $I_t = I_c(R) + I_s$, onde $I_c(R)$ é a corrente volumétrica total dentro do cilindro. Da Eq. \ref{skwjwuwhwh}:
+\begin{equation}
+I_c(s_1=R) = 8k \pi  \int_0^R s^3 ds = 2k\pi R^4   \label{sksjwjwsmmn}
+\end{equation}
+A definição de corrente superficial é $\vec{K} = \dfrac{d\vec{I}}{dl_{\perp}} = \dfrac{dI}{dl_{\perp}} \hat{n}$. Em nosso caso temos $\hat{n} = -\hat{z}$ (veja Eq. \ref{ewjwjwjwjwj}). Assim o comprimento perpendicular $l_{\perp}$ está no plano $xy$. Logo, a corrente total será: 
+\begin{equation}
+I_s = \oint K_b dl_{\perp} = -kR^3 \oint dl_{\perp} = - 2k \pi R^4  \label{ksjwjwdlksks}
+\end{equation} 
+O caminho de integração é uma circunferência na superfície lateral do cilindro. Das Eqs. \ref{sksjwjwsmmn} e \ref{ksjwjwdlksks} concluimos que a corrente total é zero: $I_t = 2k \pi R^4 - 2k \pi R^4 = 0$. Usando novamente a Lei de Ampére, o campo magnético fora $B_f$ será zero, pois não há corrente resultante atravessando a amperiana. A solução final para o campo magnético é:
+\begin{equation}
+\vec{B}(s) = {\color{blue}\boxed{ \left\{
+\begin{array}{rl}
+0  & \text{se } s > R  \\
+\mu_0 k s^3 \hat{\phi}  & \text{se } s < R
+\end{array}
+\right. }} \nonumber
+\end{equation}
+ 
+ 
+\noindent
+
+
+\end{document}
+
+
+
