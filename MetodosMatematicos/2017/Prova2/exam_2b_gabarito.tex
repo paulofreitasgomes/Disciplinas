@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{mathpazo} 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%pacotes para fazer letra cursiva
+\usepackage{mathrsfs}
+
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+
+
+%para criar o espacamento usual no primeiro paragrafo
+%\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+
+
+
+\setlength{\parindent}{0em} %altera o espacamento do paragrafo
+\setlength{\parskip}{1em}  %altera o espaco entre dois paragrafos
+\renewcommand{\baselinestretch}{1.1} %altera o espacamento entre as linhas
+
+\begin{document}
+
+
+\subsection*{Jataí, August 2nd, 2017. UFG, Jataí. Prof. Paulo Freitas Gomes.}
+
+\subsection*{Mathematical Methodos for Physicists. Exam 2.}
+
+{\color{red}Solutions:}
+
+1) Find the Fourier series of the function:
+\begin{equation}
+f(x) = \left\{
+\begin{array}{rl}
+ 0& \text{se } -\pi < x < 0  \\
+\\
+h& \text{se } 0 < x < \pi
+\end{array} 
+ \right.  \nonumber
+\end{equation}
+
+{\color{red}Value: 2,5. Expected answer:}
+
+The Fourier series and the coeficients are defined as:
+\begin{eqnarray}
+f(x) &=& \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos nx  + \sum_{n=1}^{\infty} b_n \sin nx  ,   \nonumber \\
+a_n &=& \dfrac{1}{\pi} \int_{-\pi}^{+\pi} f(x) \cos nx dx, \qquad \qquad b_n = \dfrac{1}{\pi} \int_{-\pi}^{+\pi} f(x) \sin nx dx, \nonumber
+\end{eqnarray}
+The calculation of the coefficients are direct. As the integrand in the interval $-\pi < x <0$ is zero, we have:
+\begin{eqnarray}
+a_0 &=& \dfrac{1}{\pi} \int_0^{\pi} h dt = h, \nonumber \\
+a_n &=& \dfrac{1}{\pi} \int_0^{\pi} h \cos nt dt = \dfrac{h}{n\pi} (\sin nt)\biggr\rvert_{0}^{\pi} = 0, \quad n = 1, 2, 3, ..., \nonumber \\ 
+b_n &=& \dfrac{1}{\pi} \int_0^{\pi} h\sin nt dt = -\dfrac{h}{n\pi} (\cos nt)\biggr\rvert_{0}^{\pi} = \dfrac{h}{n\pi} (1-\cos n\pi) = \dfrac{h}{n\pi} \left[ 1-(-1)^n \right]  \nonumber
+\end{eqnarray}
+If $n$ is even $1-(-1)^n = 1-1 = 0$, if $n$ is odd $1-(-1)^n=1-(-1) = 2$. The resulting series is:
+ \begin{eqnarray}
+  f(x) &=&   \sum_{n=1}^{\infty} \dfrac{h}{n\pi} \left[ 1-(-1)^n \right] \sin nx =  \dfrac{h}{2} + \dfrac{2h}{\pi}\sum_{n =1,3,5,7...}^{\infty} \dfrac{\sin nx}{n}, \nonumber \\
+  &=& \dfrac{h}{2} + \dfrac{2h}{\pi} \left( \sin x + \dfrac{\sin 3x}{3} + \dfrac{\sin 5x}{5} + ...\right). \nonumber 
+  \end{eqnarray}
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+2) a) Show that the Fourier transform of the function $f(t)$ (defined below) is $F(\omega) = h\sqrt{\dfrac{2}{\pi}} \dfrac{\sin \omega}{\omega}$.
+\begin{equation}
+f(t) = \left\{
+\begin{array}{rl}
+ h,& \text{se } \vert t \vert < 1,  \\
+\\
+0,& \text{se } \vert t \vert >1.
+\end{array} 
+ \right.  \nonumber
+\end{equation}
+
+{\color{red}Value: 1,5. Expected answer:}
+Applying the Fourier transform to the function $f(t)$, we have:
+\begin{equation}
+F(\omega) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) e^{i \omega t} dt =\dfrac{1}{\sqrt{2\pi}} \int_{-1}^1 h e^{i \omega t} dt = \dfrac{h}{\sqrt{2\pi}} \dfrac{e^{i\omega t}}{i\omega}\biggr\rvert_{-1}^1 = h\dfrac{e^{i\omega} - e^{-i\omega} }{i\omega \sqrt{2\pi}} \nonumber 
+\end{equation}
+However $\sin \theta = \dfrac{e^{i\theta} - e^{-i\theta} }{2i}$. So the answer can be written as:
+\begin{equation}
+F(\omega) = h\sqrt{\dfrac{2}{\pi}} \dfrac{\sin \omega}{\omega}. \nonumber
+\end{equation}
+
+b) Calculate the Fourier Transform of the function $g(x) = 1 + x$.
+
+{\color{red}Value: 1,0. Expected answer:}
+
+The Fourier transform is:
+\begin{eqnarray}
+G(\omega) &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} g(x) e^{i \omega x} dx = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} (1+x) e^{i \omega x} dx, \nonumber \\
+&=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{i \omega x} dx + \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} x e^{i \omega x} dx.\nonumber
+\end{eqnarray}
+To do the second integral, we use integration by parts: $\int udv = uv - \int v du$. We choose $u=x$ e $dv = e^{i \omega x} dx$. Thus: $du = dx$ e $v = (e^{i \omega x})/(i\omega)$. We have:
+\begin{equation}
+\int_{-\infty}^{+\infty} x e^{i \omega x} dx =  \dfrac{x}{i \omega} e^{i \omega x}\biggr\rvert_{-\infty}^{+\infty} - \dfrac{1}{i\omega} \int_{-\infty}^{+\infty}  e^{i \omega x} dx 
+\end{equation} 
+The transform becomes:
+\begin{equation}
+G(\omega) = \dfrac{I}{\sqrt{2\pi}} +  \dfrac{x}{i \omega \sqrt{2\pi}} e^{i \omega x}\biggr\rvert_{-\infty}^{+\infty} - \dfrac{I}{i \omega \sqrt{2\pi}} = \dfrac{I}{ \sqrt{2\pi}} \left( 1- \dfrac{1}{i \omega} \right) +  \dfrac{x}{i \omega \sqrt{2\pi}} e^{i \omega x}\biggr\rvert_{-\infty}^{+\infty}. \nonumber
+\end{equation}
+where the integral is $I= \int_{-\infty}^{+\infty} e^{i \omega x} dx$. However, the integral $I$ and the term $e^{i \omega x}\biggr\rvert_{-\infty}^{+\infty}$ goes to infinity, which makes $G(\omega)$ undetermined. If $g(x)=0$ for $\vert x \vert > x_0$ for some $x_0>0$, $G(\omega)$ would be properly define. 
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+3) Suppose an harmonic oscilator defined by the differential equation: $d^2y/dt^2 + \Omega^2 y = A \cos \omega_0 t$. Using the Fourier Transform, find the solution $y(t)$. \textbf{Hint 1}: suppose
+\begin{equation}
+y(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) e^{i \omega t} d\omega, \qquad \qquad \cos (\omega_0 t) = f(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} d\omega, \nonumber
+\end{equation}
+and write the differential equation as function of $Y(\omega)$ and $F(\omega)$. \textbf{Hint 2}: what is the time derivative of the Fourier transform of $y(t)$? \textbf{Hint 3}: the Fourier transform representation of the Dirac $\delta$ function may be important. 
+
+{\color{red}Value: 2,5. Expected answer:}
+Writing $y(t)$ as a Fourier transform means:
+\begin{equation}
+y(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) e^{i \omega t} d\omega. \label{sksjwjwjwjhwh}
+\end{equation}
+Now, the derivative is with respect of time $t$ only, so it will have effect only on the exponential term:
+\begin{eqnarray}
+\dfrac{dy(t)}{dt} &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) \dfrac{d}{dt}e^{i \omega t} d\omega = \dfrac{i\omega}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) e^{i \omega t} d\omega = i\omega y(t), \nonumber \\ 
+ \dfrac{d^2 y}{dt^2} &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \dfrac{d^2 }{dt^2} \left[  Y(\omega) e^{i \omega t}\right]  d\omega = -\omega^2 y(t). \label{sksjwjwjwjhwh}
+\end{eqnarray}
+The differential equation becomes:
+\begin{equation}
+\dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) (\Omega^2 - \omega^2) e^{i \omega t} d\omega = A \cos \omega_0 t. \nonumber
+\end{equation}
+This equation is difficult to solve because on the right side of it there is an integral on $\omega$ and on the other side there is a function of time. So we have to write $A \cos \omega_0 t$ as a Fourier transform:
+\begin{equation}
+\cos (\omega_0 t) = f(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} d\omega. \label{sksjwnwhwy}
+\end{equation}
+To find $F(\omega)$ I take the inverse Fourier Transform of $\cos \omega_0 t$. But before I write it as sum of complex exponentials:
+\begin{equation}
+\cos \theta = \dfrac{e^{i\theta} + e^{-i\theta} }{2}. \nonumber
+\end{equation}
+So:
+\begin{eqnarray}
+F(\omega) &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \cos (\omega_0 t) e^{-i \omega t} dt = \dfrac{1}{2\sqrt{2\pi}} \int_{-\infty}^{\infty} (e^{i\omega_0 t} + e^{-i\omega_0 t}) e^{-i \omega t} dt \nonumber \\
+&=& \dfrac{1}{2\sqrt{2\pi}} \left[  \int_{-\infty}^{\infty} e^{-i(\omega - \omega_0)t} d\omega + \int_{-\infty}^{\infty} e^{-i(\omega_0+ \omega)t} dt \right]. \nonumber
+\end{eqnarray}
+The Fourier transform representation of the Dirac $\delta$ function is:
+\begin{equation}
+\delta (x-x_0) =  \dfrac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i k(x-x_0)} dk.
+\end{equation}
+So each integral of the exponential term in $F(\omega)$ can be seen as a Dirac $\delta$ function:
+\begin{equation}
+F(\omega) = \dfrac{\pi}{\sqrt{2\pi}} \left[ \delta (\omega - \omega_0) + \delta (\omega + \omega_0)\right]. \nonumber
+\end{equation}
+Now that we have $F(\omega)$ the differential equation becomes:
+\begin{equation}
+\dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) (\Omega^2 - \omega^2) e^{i \omega t} dt = \dfrac{A}{2} \int_{-\infty}^{\infty}  e^{i \omega t} \left[ \delta(\omega - \omega_0) + \delta(\omega + \omega_0) \right]  d\omega. \nonumber
+\end{equation}
+If two integrals are the same, we can say the integrand are the same:
+\begin{equation}
+Y(\omega) =  \sqrt{\dfrac{\pi}{2}} \dfrac{A}{\Omega^2 - \omega^2}  \left[ \delta(\omega - \omega_0) + \delta(\omega + \omega_0) \right].  \nonumber
+\end{equation}
+Now we perform the Fourier transform of $Y(\omega)$ to find $y(t)$. The Fourier transform of the Dirac $\delta$ function is easy:
+\begin{equation}
+\int_{-\infty}^{\infty} \dfrac{\delta(\omega \pm \omega_0)}{\Omega^2 - \omega^2} e^{i \omega t} d\omega = \dfrac{e^{\mp i \omega_0 t}}{\Omega^2 - \omega_0^2}. \label{slkwjerlkjsdf}
+\end{equation}
+So:
+\begin{eqnarray}
+y(t) &=& \dfrac{A}{2} \int_{-\infty}^{\infty} \dfrac{e^{i \omega t}}{\Omega^2 - \omega^2}  \left[ \delta(\omega - \omega_0) + \delta(\omega + \omega_0) \right] d\omega \nonumber \\
+&=& \dfrac{A}{2} \dfrac{e^{i \omega_0 t}}{\Omega^2 - \omega_0^2} + \dfrac{A}{2} \dfrac{e^{i \omega_0 t}}{\Omega^2 - \omega_0^2} =  \dfrac{A}{2} \dfrac{e^{i \omega_0 t} + e^{-i \omega_0 t} }{\Omega^2 - \omega_0^2}  \nonumber \\
+&=& \dfrac{A}{\Omega^2 - \omega_0^2} \cos (\omega_0 t). \nonumber
+\end{eqnarray}
+We used again the complex exponential representation of the cossine.
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+4) a) Find the Laplace transform $\mathscr{L}$ of the following functions: $f_1(t) = e^{+kt}$ and $f_2(t) = e^{-kt}$ with $t>0$.
+
+{\color{red}Value: 1,0. Expected answer:}
+The definition of the Laplace transform of a function $f(t)$ is:
+\begin{equation}
+\mathscr{L} \left\lbrace  F(t) \right\rbrace  = \int_0^{\infty} e^{-st} F(t)dt, \qquad \qquad t>0. \nonumber
+\end{equation}
+So:
+\begin{eqnarray}
+\mathscr{L} \left\lbrace  e^{+kt} \right\rbrace &=&  \int_0^{\infty} e^{-st} e^{+kt} dt = \dfrac{e^{(k-s)t}}{k-s}\biggr\rvert_0^{\infty} = 0-\dfrac{1}{k-s} =\dfrac{1}{s - k}, \qquad \qquad s > k. \nonumber \\
+\mathscr{L} \left\lbrace  e^{-kt} \right\rbrace &=&  \int_0^{\infty} e^{-st} e^{-kt} dt = -\dfrac{e^{-(k+s)t}}{k+s}\biggr\rvert_0^{\infty} = - \dfrac{0-1}{k+s}=\dfrac{1}{s + k}. \nonumber 
+\end{eqnarray}
+
+b) Using the result of item a), show that the Laplace transform of the hiperbolic trigonometric functions sine and cossine are:
+\begin{equation}
+\mathscr{L} \left\lbrace  \cosh kt \right\rbrace =  \dfrac{s}{s^2-k^2}, \qquad \qquad
+\mathscr{L} \left\lbrace  \sinh kt \right\rbrace = \dfrac{k}{s^2-k^2}. \nonumber
+\end{equation}
+with $s>k$. \textbf{Hint}: remember that, as the Fourier transform, the Laplace transform is also a linear operator: $\mathscr{L} \left\lbrace  aF_1(t) + bF_2(t) \right\rbrace = a\mathscr{L} \left\lbrace  F_1(t) \right\rbrace  + b \mathscr{L}\left\lbrace  F_2(t) \right\rbrace$ for constants $a$ and $b$.
+
+{\color{red}Value: 1,0. Expected answer:}
+I will use the exponential representation of the hiperbolic trigonometric functions:
+\begin{equation}
+\cosh \theta = \dfrac{e^{\theta} + e^{-\theta} }{2}, \qquad \qquad \sinh \theta = \dfrac{e^{\theta} - e^{-\theta} }{2}. \nonumber
+\end{equation}
+Taking the Laplace transform:
+\begin{eqnarray}
+\mathscr{L} \left\lbrace  \cosh kt \right\rbrace &=& \mathscr{L} \left\lbrace \dfrac{ e^{kt}+ e^{-kt}}{2} \right\rbrace = \dfrac{1}{2} \left(  \mathscr{L} \left\lbrace  e^{kt} \right\rbrace + \mathscr{L} \left\lbrace e^{-kt} \right\rbrace \right) = \dfrac{1}{2} \left( \dfrac{1}{s-k}  + \dfrac{1}{s+k} \right) \nonumber \\
+ &=&  \dfrac{s+k + s-k}{2(s-k)(s+k)}= \dfrac{s}{s^2-k^2}, \nonumber \\
+\mathscr{L} \left\lbrace  \sinh kt \right\rbrace &=& \mathscr{L} \left\lbrace \dfrac{ e^{kt}- e^{-kt}}{2} \right\rbrace = \dfrac{1}{2} \left(  \mathscr{L} \left\lbrace  e^{kt} \right\rbrace - \mathscr{L} \left\lbrace e^{-kt} \right\rbrace \right) = \dfrac{1}{2} \left( \dfrac{1}{s-k}  - \dfrac{1}{s+k} \right)\nonumber \\
+ &=&  \dfrac{s+k - (s-k)}{2(s-k)(s+k)}=  \dfrac{k}{s^2-k^2}, \nonumber 
+\end{eqnarray}
+
+c) Show that $\mathscr{L} \left\lbrace  \delta (t-a) \right\rbrace =  e^{-sa}$, where $\delta (t-a)$ is the Dirac $\delta$ function. It may not look like so, but this question is the easiest one of the exam.
+
+{\color{red}Value: 0,5. Answer:}
+The definition of Dirac $\delta$ function is:
+\begin{equation}
+\int_{-\infty}^{\infty} f(x) \delta(x-a) dx = f(a). \nonumber
+\end{equation}
+So, the Laplace transform $\delta (t-a)$ will be:
+\begin{equation}
+\mathscr{L} \left\lbrace  \delta (t-a) \right\rbrace = \int_0^{\infty} e^{-st} \delta (t-a)dt = e^{-sa}. \nonumber
+\end{equation}
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+Equations one may need:
+
+
+
+\begin{eqnarray}
+f(x) &=& \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos nx  + \sum_{n=1}^{\infty} b_n \sin nx,   \nonumber \\
+a_n &=& \dfrac{1}{\pi} \int_{x_0}^{x_0+2 \pi} f(x) \cos nx dx, \qquad \qquad b_n = \dfrac{1}{\pi} \int_{x_0}^{x_0+2 \pi} f(x) \sin nx dx, \nonumber \\
+F(\omega) &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) e^{i \omega t} dt, \qquad \qquad f(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(\omega) e^{-i \omega t} dt, \nonumber \\
+\delta (x-x_0) &=&  \dfrac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i k(x-x_0)} dk, \qquad \qquad \int_{-\infty}^{\infty} f(x) \delta(x-a) dx = f(a), \nonumber \\
+\cos \theta &=& \dfrac{e^{i\theta} + e^{-i\theta} }{2}, \qquad \qquad \sin \theta = \dfrac{e^{i\theta} - e^{-i\theta} }{2i} \nonumber \\
+\cosh \theta &=& \dfrac{e^{\theta} + e^{-\theta} }{2}, \qquad \qquad \sinh \theta = \dfrac{e^{\theta} - e^{-\theta} }{2} \nonumber \\
+f(s) &=& \mathscr{L} \left\lbrace  F(t) \right\rbrace  = \int_0^{\infty} e^{-st} F(t)dt, \qquad \qquad t>0. \nonumber
+\end{eqnarray}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\begin{flushright}
+\begin{small}
+\textit{ Let me tell you something you already know. The world ain't all sunshine and rainbows. It's a very mean and nasty place and I don't care how tough you are it will beat you to your knees and keep you there permanently if you let it. You, me, or nobody is gonna hit as hard as life. But it ain't about how hard you hit. It's about how hard you can get hit and keep moving forward. How much you can take and keep moving forward. That's how winning is done! Now if you know what you're worth then go out and get what you're worth. But ya gotta be willing to take the hits, and not pointing fingers saying you ain't where you wanna be because of him, or her, or anybody! Cowards do that and that ain't you! You're better than that!}  
+Rocky Balboa
+\end{small}
+\end{flushright}
+
+
+
+\end{document}
+
+
+

@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{mathpazo} 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%pacotes para fazer letra cursiva
+\usepackage{mathrsfs}
+
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+
+
+%para criar o espacamento usual no primeiro paragrafo
+%\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+
+
+
+\setlength{\parindent}{0em} %altera o espacamento do paragrafo
+\setlength{\parskip}{1em}  %altera o espaco entre dois paragrafos
+\renewcommand{\baselinestretch}{1.1} %altera o espacamento entre as linhas
+
+\begin{document}
+
+
+\subsection*{Jataí, August 2nd, 2017. UFG, Jataí. Prof. Paulo Freitas Gomes.}
+
+\subsection*{Mathematical Methodos for Physicists. Exam 2.}
+
+
+1) Find the Fourier series of the function:
+\begin{equation}
+f(x) = \left\{
+\begin{array}{rl}
+ 0& \text{se } -\pi < x < 0  \\
+\\
+h& \text{se } 0 < x < \pi
+\end{array} 
+ \right.  \nonumber
+\end{equation}
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+2) a) Show that the Fourier transform of the function $f(t)$ (defined below) is $F(\omega) = h\sqrt{\dfrac{2}{\pi}} \dfrac{\sin \omega}{\omega}$.
+\begin{equation}
+f(t) = \left\{
+\begin{array}{rl}
+ h,& \text{se } \vert t \vert < 1,  \\
+\\
+0,& \text{se } \vert t \vert >1.
+\end{array} 
+ \right.  \nonumber
+\end{equation}
+
+b) Calculate the Fourier Transform of the function $g(x) = 1 + x$.
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+3) Suppose an harmonic oscilator defined by the differential equation: $d^2y/dt^2 + \Omega^2 y = A \cos \omega_0 t$. Using the Fourier Transform, find the solution $y(t)$. \textbf{Hint 1}: suppose
+\begin{equation}
+y(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} Y(\omega) e^{i \omega t} d\omega, \qquad \qquad \cos (\omega_0 t) = f(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} d\omega, \nonumber
+\end{equation}
+and write the differential equation as function of $Y(\omega)$ and $F(\omega)$. \textbf{Hint 2}: what is the time derivative of the Fourier transform of $y(t)$? \textbf{Hint 3}: the Fourier transform representation of the Dirac $\delta$ function may be important. 
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+4) a) Find the Laplace transform $\mathscr{L}$ of the following functions: $f_1(t) = e^{kt}$ and $f_2(t) = e^{-kt}$ with $t>0$.
+
+b) Using the result of item a), show that the Laplace transform of the hiperbolic trigonometric functions sine and cossine are:
+\begin{equation}
+\mathscr{L} \left\lbrace  \cosh kt \right\rbrace =  \dfrac{s}{s^2-k^2}, \qquad \qquad
+\mathscr{L} \left\lbrace  \sinh kt \right\rbrace = \dfrac{k}{s^2-k^2}. \nonumber
+\end{equation}
+with $s>k$. \textbf{Hint}: remember that, as the Fourier transform, the Laplace transform is also a linear operator: $\mathscr{L} \left\lbrace  aF_1(t) + bF_2(t) \right\rbrace = a\mathscr{L} \left\lbrace  F_1(t) \right\rbrace  + b \mathscr{L}\left\lbrace  F_2(t) \right\rbrace$ for constants $a$ and $b$.
+
+c) Show that $\mathscr{L} \left\lbrace  \delta (t-a) \right\rbrace =  e^{-sa}$, where $\delta (t-a)$ is the Dirac $\delta$ function. It may not look like so, but this question is the easiest one of the exam.
+
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+Equations one may need:
+
+
+
+\begin{eqnarray}
+f(x) &=& \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos nx  + \sum_{n=1}^{\infty} b_n \sin nx,   \nonumber \\
+a_n &=& \dfrac{1}{\pi} \int_{x_0}^{x_0+2 \pi} f(x) \cos nx dx, \qquad \qquad b_n = \dfrac{1}{\pi} \int_{x_0}^{x_0+2 \pi} f(x) \sin nx dx, \nonumber \\
+F(\omega) &=& \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) e^{i \omega t} dt, \qquad \qquad f(t) = \dfrac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(\omega) e^{-i \omega t} dt, \nonumber \\
+\delta (x-x_0) &=&  \dfrac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i k(x-x_0)} dk, \qquad \qquad \int_{-\infty}^{\infty} f(x) \delta(x-a) dx = f(a), \nonumber \\
+\cos \theta &=& \dfrac{e^{i\theta} + e^{-i\theta} }{2}, \qquad \qquad \sin \theta = \dfrac{e^{i\theta} - e^{-i\theta} }{2i} \nonumber \\
+\cosh \theta &=& \dfrac{e^{\theta} + e^{-\theta} }{2}, \qquad \qquad \sinh \theta = \dfrac{e^{\theta} - e^{-\theta} }{2} \nonumber \\
+f(s) &=& \mathscr{L} \left\lbrace  F(t) \right\rbrace  = \int_0^{\infty} e^{-st} F(t)dt, \qquad \qquad t>0. \nonumber
+\end{eqnarray}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\begin{flushright}
+\begin{small}
+\textit{ Let me tell you something you already know. The world ain't all sunshine and rainbows. It's a very mean and nasty place and I don't care how tough you are it will beat you to your knees and keep you there permanently if you let it. You, me, or nobody is gonna hit as hard as life. But it ain't about how hard you hit. It's about how hard you can get hit and keep moving forward. How much you can take and keep moving forward. That's how winning is done! Now if you know what you're worth then go out and get what you're worth. But ya gotta be willing to take the hits, and not pointing fingers saying you ain't where you wanna be because of him, or her, or anybody! Cowards do that and that ain't you! You're better than that!}  
+Rocky Balboa
+\end{small}
+\end{flushright}
+
+For those who could use a translation...
+
+\begin{flushright}
+\begin{small}
+\textit{ Deixe-me dizer algo que você já sabe. O mundo não é apenas sol e arco-íris. É um lugar maldoso e asqueroso e não importa quão forte você seja, ele vai te bater até você ficar de joelhos e te deixar assim enquanto você permitir. Você, eu, e ninguém mais, irá bater tão forte quanto a vida. Mas o importante não é o quão forte você consegue bater. O importante é o quão forte você consegue aguentar e continuar andando de cabeça erguida. Isso é vitória. Se você sabe o seu valor, então corra atrás do que você merece. Mas você tem que querer aguentar as pancadas da vida, e não apontar dedos culpando os outros. Covardes fazem isso e você não é um covarde. Você é melhor que isso.}  
+Rocky Balboa
+\end{small}
+\end{flushright}
+
+
+\end{document}
+
+
+
