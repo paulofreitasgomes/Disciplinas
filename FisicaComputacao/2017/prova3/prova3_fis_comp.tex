@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{mathpazo} 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+
+
+%para criar o espacamento usual no primeiro paragrafo
+%\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\setlength{\parindent}{0em} %altera o espacamento do paragrafo
+\setlength{\parskip}{1em}  %altera o espaco entre dois paragrafos
+\renewcommand{\baselinestretch}{1.1} %altera o espacamento entre as linhas
+
+\begin{document}
+
+
+\subsection*{Jataí, 05 de Setembro, 2017. UFG - Jataí. Prof. Paulo Freitas Gomes.}
+
+\subsection*{Física para Computação. Prova 3.}
+
+
+\vspace{0.3 in}
+\noindent
+%Aluno: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_\_
+\textbf{Name:} \noindent\rule{12cm}{0.5pt}. 
+
+
+
+{\color{blue}\textbf{1)}} Um balanço gigante de um parque de diversões consiste em um eixo vertical central com diversos braços horizontais ligados em sua extremidade superior (figura \ref{balanco}). Cada braço suspende um assento por meio de um cabo de 5,0 m de comprimento, e a extremidade superior do cabo está presa ao braço a uma distância de 3,0 m do eixo central. a) Calcule o tempo para uma revolução do balanço quando o cabo que suporta o assento faz um ângulo de 30 graus com a vertical. b) O ângulo depende do passageiro para uma dada taxa de revolução?
+
+
+
+{\color{blue}\textbf{2)}} Um pequeno carro guiado por controle remoto possui massa de 1,6 kg e se move com velocidade constante $v=12,0$ m/s em um círculo vertical no interior de um cilindro metálico oco de raio igual a 5,0 m (figura \ref{globo}). a) Qual é o módulo da força normal exercida pela parede do cilindro sobre o carro no ponto A (na base do círculo vertical)? b) E no ponto B (no topo do círculo vertical)? c) Qual a velocidade mínima que o carrinho precisa ter para que consiga executar uma volta completa?
+
+{\color{blue}\textbf{3)}} Um pequeno bloco com massa de 0,120 kg está ligado a um fio que passa através de um buraco em uma superfície horizontal sem atrito (figura \ref{globo}). Inicialmente o bloco gira a uma distância de 0,4 m do buraco com uma velocidade de 0,7 m/s. A seguir, o fio é puxado por baixo, fazendo o raio do círculo encurtar para 0,1 m. Nessa nova distância verifica-se que sua velocidade passa para 2,8 m/s. a) Qual era a tensão no fio quando o bloco possuía velocidade $v=$ 0,7 m/s? b) Qual é a tensão no fio quando o bloco possuía velocidade final $v=$ 2,8 m/s? c) Qual foi o trabvalho realizado pela pessoa que puxou o fio?
+
+\begin{figure}[!h]
+\centering
+\subfigure{a)
+\includegraphics[width=2.3 in]{balanco.png}
+\label{balanco} 
+}
+\subfigure{b)
+\includegraphics[width=2.2 in]{globo.png}
+\label{globo}
+}
+\subfigure{c)
+\includegraphics[width=2.0 in]{mesa.png}
+\label{mesa}
+}
+\subfigure{d)
+\includegraphics[width=3.3 in]{morro.png}
+\label{morro}
+} 
+\caption{\subref{balanco} Balanço do problema 1. \subref{globo} Globo do problema 2.  \subref{mesa} Bloco do problema 3. \subref{morro} Ilustração do problema 4.}
+\end{figure}
+
+{\color{blue}\textbf{4)}} Você e sua bicicleta possuem massa total igual a 80 kg. Quando você atinge a base de uma ponte, está se deslocando com uma velocidade de 5,0 m/s (figura). No topo da ponte você subiu uma distância vertical de 5,2 m e sua velocidade diminuiu para 1,5 m/s. Despreze o trabalho relizado pelo atrito e qualquer ineficiência na bicicleta ou em suas pernas. a) Qual o trabalho total realizado sobre você e sua bicicleta quando você vai da base ao topo da ponte? b) Qual o trabalho realizado pela força que você aplica sobre os pedais?
+
+
+
+\begin{flushright}
+\begin{small}
+\textit{ Deixe-me dizer algo que você já sabe. O mundo não é apenas sol e arco-íris. É um lugar maldoso e asqueroso e não importa quão forte você seja, ele vai te bater até você ficar de joelhos e te deixar assim enquanto você permitir. Você, eu, e ninguém mais, irá bater tão forte quanto a vida. Mas o importante não é o quão forte você consegue bater. O importante é o quão forte você consegue aguentar e continuar andando de cabeça erguida. Isso é vitória. Se você sabe o seu valor, então corra atrás do que você merece. Mas você tem que querer aguentar as pancadas da vida, e não apontar dedos culpando os outros. Covardes fazem isso e você não é um covarde. Você é melhor que isso.}  
+\textbf{Rocky Balboa}
+\end{small}
+\end{flushright}
+
+
+\end{document}
+
+
+
