@@ -1,0 +1,129 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+\section*{Prova 2, 11/06/2013}
+
+\section*{Física para Computação, Prof. Paulo Freitas Gomes}
+
+\vspace{0.5 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+Explique seu raciocínio e seja organizado.
+
+\vspace{0.2 in}
+
+1) Joãozinho está sentado sobre a mureta de sua casa. Ele lança um avião feito de papel de uma altura $h$ em relação ao solo. O lançamento é horizontal com velocidade $\vec{v} = v \hat{i}$. Suponha que o eixo $x$ seja paralelo ao solo e o eixo $y$ seja vertical apontado para cima. Entretanto, um vento soprando paralelo ao solo contra Joãozinho dá ao avião de brinquedo uma aceleração $\vec{a} = -a\hat{i}$, ou seja, anti-paralelo a velocidade inicial. Isso faz com que o avião vá e volte caindo no chão diretamente abaixo do meninote. Determine a altura $h$ em termos de $v$, $a$ e $g$. Despreze o efeito da resistência do ar no movimento vertical. 
+ 
+ 
+ \vspace{0.2 in}
+
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=1.9 in]{globo-morte.pdf}
+\label{globo-morte}
+}
+\subfigure{b)
+\includegraphics[width=2.6 in]{felix.jpg}
+\label{felix}
+}
+\caption{\subref{globo-morte} Globo da morte: geometria referente ao problema 2. O ponto A é o mais baixo do círculo e o B o mais alto. \subref{felix} Felix Baumgartner no momento do salto. Google Imagens.}
+\end{figure}
+
+2) Um pequeno carro de controle remoto de massa 2 kg se move com velocidade de 12 m/s em um círculo vertical dentro de um cilindro metálico oco de raio 5 m, (veja figura \ref{globo-morte}. a) Calcule a magnitude da força normal exercida pelas parede do cilindro no carro no ponto A. b) Calcule a mesma magnitude no ponto B. c) Suponha então que você desacelere o carrinho até ele parar no ponto A e em seguida você o acelera para que ele faça o loop. Qual a velocidade mínima que o carrinho deve ter para completar esse loop?
+
+\vspace{0.2 in}
+
+3) Em 14 de outubro de 2012, o austríaco Felix Baumgartner fez um impressionante salto de paraquedas. Ele saltou de uma altitude de 38.964,4 m, aproximadamente 39 km, veja figura \ref{felix}. Ele caiu livremente, apenas sob ação da força da gravidade e da resistência do ar por 36 km até abrir o pára-quedas. Ele atingiu uma velocidade máxima de queda de 1.357,6 km/h. Um dos recordes foi ser a primeira pessoa a quebrar a barreira do som (velocidade de 1.236 km/h) sem ser impulsionado por nenhum tipo de motor. a) Faça um diagrama de corpo livre do Felix no primeiro instante de queda livre. b) Faça outro diagrama quando Felix atinge a velocidade de 50 km/h. c) Faça outro diagrama quando ele atinge a velocidade máxima. Em todos os diagramas, indique exatamente quem são as forças atuando nele, escrevendo a expressão para cada uma delas e identificando todos os parâmetros. d) Desprezando a resistência do ar, calcule qual seria a velocidade no instante em que Felix abre o pára-quedas. Comente.
+
+\vspace{0.2 in}
+ 
+ 
+ 4) Nadia Comaneci é uma ex-ginasta romena, ganhadora de 3 ouros olímpicos na Olimpíada de Montreal em 1976 e 2 ouros 4 anos depois em Moscow. Nadia foi a primeira e única ginasta a receber a nota máxima em uma prova. Sua atuação nas barras paralelas assimétricas em Montreal (figura 2) mostraram sua leveza, técnica apurada e enorme talento, merecedores da nota 10. Um dos exercícios que Nadia fazia em seus treinos eram movimentos enquanto pendurada em uma corda suspensa. Suponha que Nadia, em seus tempos de atleta, tenha uma massa $m$ e que esteja escalando uma corda vertical que está presa ao teto. Ignore o peso da corda. a) Desenhe um diagrama do corpo livre para a ginasta. Calcule a tensão na corda nas seguintes situações: b) considerando que a ginasta escala com uma velocidade constante, c) considerando que a ginasta dependura-se estaticamente na corda, d) a ginasta sobe a corda com aceleração de módulo $a_s$, e) a ginasta escorrega pela corda de cima para baixo com aceleração de módulo $a_d$.
+
+\begin{SCfigure} 
+\centering
+\includegraphics[width=2.0 in]{nadia-2.jpg}
+\label{nadia}
+\caption{Nadia Comaneci nas barras assimétricas na Olímpiada de Montreal em 1976. Google Imagens.}
+\end{SCfigure}
+
+\end{document}
+
+
+

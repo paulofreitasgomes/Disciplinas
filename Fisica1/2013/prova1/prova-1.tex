@@ -1,0 +1,112 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+\section*{Prova 1, 07/05/2013}
+
+\section*{Física para Computação, Prof. Paulo Freitas Gomes}
+
+\vspace{0.5 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+1) Um foguete aciona seus dois motores simultaneamente. O primeiro produz um impulso de 800 N na direção $x$, enquanto o outro fornece um impulso de 500 N a 40 graus abaixo dessa direção. Determine o módulo e a direção (em relação ao eixo $x$) do impulso resultante que esses motores exercem sobre o foguete. 
+
+\vspace{0.2 in}
+
+2) Considere os vetores da figura \ref{vetores}. a) Escreva cada um deles em termos dos versores $\hat{i}$, $\hat{j}$ e $\hat{k}$. b) Escreva o vetor resultante $\vec{D}=\vec{A}+\vec{B}+\vec{C}$ também usando os versores unitários.
+
+\begin{figure}[h!] 
+\centering
+\includegraphics[width=2.1 in]{vetores.pdf}
+\caption{Vetores do problema 2.}
+\label{vetores}
+\end{figure}
+
+\vspace{0.2 in}
+
+3) \textbf{Um teste simples para o tempo de reação}. Uma régua comum é mantida verticalmente acima de sua mão com a extremidade inferior na marca zero entre o seu polegar e o indicador. Ao ver a régua sendo largada, no instante $t$ = 0, você a segura com esses dois dedos. Seu tempo de reação pode ser calculado pela distância percorrida pela régua, medida diretamente pela posição dos seus dedos no ponto onde você segurou a régua. a) Deduza uma relação para seu tempo de reação em função da distância $d$ indicada na régua. b) Calcule esse tempo de reação supondo $d$ = 19 cm.
+
+\vspace{0.2 in}
+
+4) \textbf{Ultrapassagem}. Suponha que você esteja viajando em seu Bugatti Veyron em uma das famosas autobahn da Alemanha, que são rodovias nas quais não há limite de velocidade. Você então deseja ultrapassar um caminhão que está perdido nessa autobahn, com velocidade constante de 25 m/s. Inicialmente, você também está a 25 m/s e seu pára-choque dianteiro está a 20 m atrás do pára-choque traseiro do caminhão. Apenas soltando o peso de seu pé no acelerdor, o carro acelera com taxa constante de 0,8 m/s$^2$, faz a ultrapassagem e a seguir você volta para a pista do caminhão, quando a traseira de seu carro está a 30 m da frente do caminhão. O comprimento do carro é de 4,5 m e o do caminhão é de 20 m. a) Qual o tempo necessário para o carro ultrapassar o caminhão? b) Qual a distância percorrida pelo carro nesse intervalo de tempo? c) Qual é a velocidade final do carro? 
+
+\vspace{0.2 in}
+ 
+
+\end{document}
+
+
+

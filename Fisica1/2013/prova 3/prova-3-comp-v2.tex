@@ -1,0 +1,129 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+\section*{Prova 3, 23/07/2013}
+
+\section*{Física para Computação, Prof. Paulo Freitas Gomes}
+
+\vspace{0.5 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+1) (3 pontos) Um velho balde com massa igual a 7 kg está pendurado em um poço na extremidade de uma corda. A corda passa sobre uma polia sem atrito no topo do poço e você puxa horizontalmente a extremidade da corda para elevar lentamente o balde de uma altura de 4 m. a) Qual o trabalho realizado pela sua força ao puxar o balde para cima? b) Qual o trabalho realizado pela força da gravidade sobre o balde? c) Qual o trabalho total realizado sobre o balde? d) Esse resultado faz sentido? Por que?
+ 
+ 
+ 2) (3 pontos) \textbf{Cloreto de sódio}. Na figura 1 está o gráfico da energia potencial do cloreto de sódio em função da distância $r$ entre os átomos. a) Qual a distância $r_0$ interatômica de equilíbrio? b) Qual o valor da energia potencial nessa posição de equilíbrio? c) Na posição $r$ = 0,4 nm, a força entre os átomos é de atração ou repulsão? d) Qual a origem da força de repulsão de Pauli quando a distância é menor que $r_0$? 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3.2 in]{naclpauli.pdf}
+\label{naclpauli}
+\caption{Figura referente ao problema 2.}
+\end{figure}
+
+3) (3 pontos) \textbf{Montanha russa}. Considere a motanha russa ilustrada na figura \ref{montanharussa}, na qual o carrinho pesa 350 kg e inicia o percurso do repouso no ponto A. Despreze qualquer atrito. a) Qual a velocidade do carrinho no ponto B? b) Qual a força que o carrinho faz no trilho também no ponto B? c) Em qual ponto de todo o trajeto em questão o carrinho tem a maior velocidade? d) Qual é essa velocidade?
+
+4) (4 pontos) \textbf{Nem todos os recordes são feitos para serem quebrados}. Serguei Bubka, veja figura \ref{bubka}, é um ex-atleta ucraniano que competia em salto com vara. É considerado o maior saltador com vara de todos os tempos, tendo quebrado o recorde mundial 35 vezes! Seu último recorde estabelecido, feito 20 anos atrás em 1993 é de 6,15 m. Durante seus saltos, Bubka alcançava uma velocidade de $v_i$ = 9.9 m/s. Considere que sua massa nos tempos de atleta era de 75 kg e da vara de 20 kg. a) Qual a energia cinética inicial do conjunto Bubka $+$ vara no instante imediatamente anterior ao salto? b) Qual a energia potencial de Bubka no instante mais alto? Considere que toda a sua massa está localizada em seu centro de massa, como uma partícula. c) Supondo que a conversão energia cinética para potencial fosse perfeita, qual seria a altura máxima que Bubka poderia conseguir? Por que ele não conseguiu efetivamente atingir essa altura? d) Quais os tipos de energias envolvidas em todo o processo, desde o instante em que ele começa a correr até o instante em que ele atinge o colchão. Explique qual tipo se converte em qual tipo em todas as etapas.
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=3.8 in]{montanharussa.pdf}
+\label{montanharussa}
+}
+\subfigure{b)
+\includegraphics[width=1.5 in]{bubka.jpg}
+\label{bubka}
+}
+\caption{\subref{montanharussa} Figura referente ao problema 3. \subref{bubka} Figura referente ao problema 4.}
+\end{figure}
+
+
+ \section*{Fórmulas para consulta}
+
+\begin{equation}
+U_g = mgy \quad \quad U_{el} = \frac{1}{2}kx^2  \quad \quad  W = \vec{F} \cdot \vec{D} \quad \quad P = \dfrac{\Delta W}{\Delta t} \quad \quad  F_c = m\dfrac{v^2}{R} \quad \quad  P  = \vec{F} \cdot \vec{v}  \quad \quad W = - \Delta U \nonumber
+\end{equation} 
+\vspace{0.1 in}
+\begin{equation}
+ F = - \dfrac{dU}{dx}  \quad \quad K= \frac{1}{2}mv^2 \quad \quad \Delta K = W \quad \quad E = K + U \quad \quad \Delta U =- \Delta K  \quad \quad  K_1 + U_1 = K_2 + U_2 \nonumber
+\end{equation} 
+
+ 
+\end{document}
+
+
+

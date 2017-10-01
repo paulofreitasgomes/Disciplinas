@@ -1,0 +1,157 @@
+%\documentclass[12pt,openany,oneside]{article}
+\documentclass[12pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+%colocar texto do lado de figuras
+\usepackage{wrapfig}
+
+
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%editar captions
+%\usepackage{floatrow}
+%\usepackage{caption}
+
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%\nopagenumbers
+
+%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+
+\begin{document}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+
+
+\subsection*{Jataí, 15/04/2015. ICET - UFG - Jataí.}
+
+\subsection*{Prova 1, Curso: Química.}
+
+\subsection*{Disciplina: Física 1. Prof. Paulo Freitas Gomes.}
+
+
+\vspace{0.4 in}
+\noindent
+Nome Completo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+Dados: Para uma esfera de raio $R$ o volume é $\dfrac{4}{3}\pi R^3$ e a área $4\pi R^2$. Dica 1: Seja organizado, faça uma letra legível, faça quantos desenhos forem necessários. Dica 2: indique todos os cálculos e fórmulas utilizados que possibilitaram você chegar a resposta final. Dica 3: Mostre que você sabe o conteúdo cobrado e que consegue chegar na resposta final. Escreva frases na sua solução mostrando o seu raciocínio.
+
+\vspace{0.2 in}
+
+\noindent
+\begin{enumerate}
+\item \textbf{Flecha do tempo.} Algumas vezes falamos de um sentido para o tempo que evolui do passado para o futuro. Isto significa que o tempo é uma grandeza vetorial? Explique.
+\item \textbf{Neptúnio} No outono de 2002, um grupo de cientistas do Los Alamos National Laboratory determinou que a massa crítica do neptúnio-237 é de aproximadamente 60 kg. A massa crítica de um material passível de desintegração nuclear é a quantidade mínima que deve ser acumulada para se iniciar uma reação em cadeia. Esse elemento possui densidade de 19,5 g/cm$^3$. Qual seria o raio (em metros) de uma esfera desse material que possui massa crítica? 
+\item \textbf{Equilíbrio}. Afirmamos que um objeto está em equilíbrio se a soma de todas as forças sobre ele é zero. A figura \ref{haste} mostra uma haste que pesa 124 N e é mantida em equilíbrio por uma tração de 100 N e uma força $\vec{F}$ no chão. A terceira força sobre a haste é o seu próprio peso. a) Use componentes de vetores para encontrar o módulo e a direção de $\vec{F}$. b) Desenhe um sistema $xy$ e indique todos os vetores força presentes na haste. c) Faça outro desenho com o mesmo sistema $xy$ mas agora indicando apenas as projeções dos vetores nas direções $x$ e $y$.
+\item \textbf{Tiro ao ovo}. Você está sobre o telhado do prédio da física, 46 m acima do solo (figura \ref{predio}). A ex namorada do seu namorado (ou o ex da sua namorada), que possui 1,8 m de altura, está caminhando próximo do edifício com uma velocidade constante de 1,2 m/s. Se você deseja jogar um ovo na cabeça dela (ou dele), em que ponto ele (ou ela) deve estar quando você largar o ovo? Suponha que o ovo esteja em queda livre. 
+\item \textbf{Saltando no rio II.} Um professor de física faz loucas proezas em suas horas vagas. Sua última façanha foi saltar sobre um rio com sua motocicleta (veja figura \ref{rio}). A rampa de decolagem era inclinada de 53 graus, a largura do rio era de 40 m e a outra margem estava a 15 m abaixo do nível da rampa. O rio estava a 100 m abaixo do nível da rampa. Despreze a resistência do ar. a) Qual deveria ser sua velocidade para que ele pudesse alcançar a outra margem sem cair no rio? b) Caso sua velocidade fosse igual à metade do valor encontrado em (a), onde ele cairia?
+\item \textbf{Bônus 1: Distância crescente.} Um projétil é lançado de um ponto P. Ele se move de tal modo que sua distância ao ponto P é sempre crescente. Determine o ângulo máximo acima da horizontal com o qual o projétil foi lançado. Despreze a resistência do ar.
+\item \textbf{Bônus 2: Estudante aplicado.} Qual o número total de horas que um estudante mediano deverá estudar ao longo de um semestre para ser aprovado em física 1 com média final 8? Suponha que o semestre letivo tenha 4 meses, que a disciplina tenha 64 horas de aula no total e que o aluno seja do curso de química da UFG em Jataí. Dica: seja didático, explique seu raciocínio e explicite todos os fatores importantes a serem utilizados no cálculo.
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.5 in]{haste.pdf}
+\label{haste}
+}
+\subfigure{b)
+\includegraphics[width=2.3 in]{predio.pdf}
+\label{predio}
+} 
+\subfigure{c)
+\includegraphics[width=2.7 in]{rio.pdf}
+\label{rio}
+} 
+\caption{\subref{haste} Figura referente ao problema 2. \subref{predio} Figura referente ao problema 3. \subref{rio} Figura referente ao problema 4.}
+\end{figure}
+
+
+\end{document}
+
+
+

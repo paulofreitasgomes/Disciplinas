@@ -1,0 +1,142 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+\section*{Prova 4, 26/08/2013}
+
+\section*{Física para Computação, Prof. Paulo Freitas Gomes}
+
+\vspace{0.5 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+1) Uma bola de gude de 10 g desloca-se com velocidade de 0,4 m/s da direita para a esquerda sobre uma pista horizontal sem atrito e colide frontalmente com outra bola de gude de 30 g que se desloca com velocidade de 0,2 m/s da esquerda para a direta (veja figura 1). a) Determine o módulo e o sentido do vetor velocidade de cada bola depois da colisão. b) Calcule a variação da energia cinética para cada bola de gude. Esse resultado é esperado? Dica: em uma colisão elástica tem-se que $v_{B2x}-v_{A2x}=-(v_{B1x}-v_{A1x})$.
+
+ \begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=2.3 in]{gude.pdf}
+\label{gude}
+}
+\subfigure{b)
+\includegraphics[width=2.5 in]{patinador.pdf}
+\label{patinador}
+}
+\caption{\subref{gude} Figura do problema 1. \subref{patinador} Figura referente ao problema 3.}
+\end{figure}
+
+ 
+ \vspace{0.2 in}
+
+2) \textbf{Energia da Lua?} Suponha que em algum momento no futuro você decida explorar a energia rotacional da Lua para uso na Terra. O período de rotação da Lua em torno de seu eixo é de $T=$ 27,3 dias. a) Qual o total de energia que nós podemos obter da rotação da Lua? b) Atualmente, o mundo consome cerca de $4\times 10^{20}$ J por ano. Mantendo esse consumo fixo, quantos anos são necessários para gastarmos toda a energia calculada no item a)? c) Essa parece ser uma fonte de energia economicamente viável na qual investir? Dados: a massa da Lua é $7,35 \times 10^{22}$ kg e ela pode ser considerada uma esfera com raio de $1,74\times 10^{6}$ m. Uma revolução completa corresponde a uma variação angular de $2\pi$ radianos. Dica: as unidades da velocidade angular $\omega$ devem ser em rad/s.
+
+
+
+\vspace{0.2 in}
+  
+3) \textbf{Um patinador girando.} Veja figura 2. Podemos considerar as mãos e os braços esticados para fora de um patinador que se prepara para girar como uma barra cujo eixo de rotação passa pelo seu centro de gravidade com momento de inércia $I_b=\dfrac{1}{12}ML^2$. A massa total das mãos e dos braços é igual a $M=$ 8 kg e quando esticadas para fora, a envergadura é de $L=$ 1,8 m. Quando as mão e os braços se aproximam do corpo, este pode ser considerado um cilindro oco com momento de inércia $I_c=MR^2$. Nesse caso, o patinador forma um cilindro de raio igual a $R=$ 0,25 m. O momento de inércia das partes restantes do corpo em relação ao eixo de rotação é constante e igual a $I_0=$ 0,4 kg$\cdot$ m$^2$.  a) Se sua velocidade angular inicial é de 0,4 rev/s (revoluções por segundo), qual é sua velocidade angular final após ele juntar os braços ao corpo? b) Calcule a variação da energia cinética. c) Ela aumentou ou diminuiu? d) Isso faz sentido? Explique. Dica: o momento de inércia total do patinador com os braços abertos é $I_1=I_b+I_0$, e com os braços abraçando o corpo é $I_2=I_c+I_0$.
+
+\vspace{0.2 in}
+
+4) a) O que é física? Qual sua importância? b) Qual a definição e o significado físico de momento linear? c) Qual a definição e o significado físico de momento angular? d) Qual a importância do conceito de momento angular na descrição quântica do átomo de hidrogênio? Dica: As respostas são simples, seja claro, preciso e direto.
+ 
+  \section*{Fórmulas para consulta}
+
+\begin{equation}
+\vec{p} = m\vec{v} \quad \quad \vec{J} = \Delta \vec{p} \quad \quad  \vec{F} = \dfrac{d\vec{P}}{dt} \quad \quad \vec{p}_i =\vec{p}_f \quad \quad K = \dfrac{1}{2}mv^2  \quad \quad  x_{cm}=\dfrac{m_1x_1+m_2x_2+...}{m_1+m_2+...} \nonumber
+\end{equation}
+ 
+\vspace{0.1 in}
+
+\begin{equation}
+ \vec{v}_{cm}=\dfrac{m_1\vec{v}_1+m_2\vec{v}_2+...}{m_1+m_2+...} \quad \quad s=r\theta \quad \quad \omega=\dfrac{d\theta}{dt}   \quad \quad  \alpha = \dfrac{d \omega}{dt} \quad \quad  \theta (t) = \theta_0 + \omega t  +\frac{1}{2} \alpha t^2  \nonumber
+\end{equation} 
+
+\vspace{0.1 in}
+
+\begin{equation}
+ v=r\omega \quad \quad K=\frac{1}{2}I\omega^2  \quad \quad I=\sum_i m_ir_i^2  \quad \quad \omega = \dfrac{2\pi}{T}  \quad \quad  \vec{\tau} = \vec{r} \times \vec{F} \nonumber
+\end{equation} 
+
+\vspace{0.1 in}
+
+\begin{equation}
+ \vec{\tau} = I \vec{\alpha} \quad \quad W = \frac{1}{2}I(\omega_2^2-\omega_1^2)  \quad \quad \vec{L} = \vec{r} \times \vec{p}  \quad \quad \dfrac{d\vec{L}}{dt} = \vec{\tau}  \quad \quad  L=I\omega \quad \quad L_i = L_f \nonumber
+\end{equation} 
+
+\end{document}
+
+
+
