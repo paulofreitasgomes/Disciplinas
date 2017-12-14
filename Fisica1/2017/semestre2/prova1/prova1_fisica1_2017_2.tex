@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathpazo} 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%para criar o espacamento usual no primeiro paragrafo
+%\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\setlength{\parindent}{0em} %altera o espacamento do paragrafo
+\setlength{\parskip}{1em}  %altera o espaco entre dois paragrafos
+\renewcommand{\baselinestretch}{1.1} %altera o espacamento entre as linhas
+
+\begin{document}
+
+\subsection*{{\color{blue}Jataí, 03 de Novembro, 2017. UFG. Prof. Paulo Freitas Gomes.}}
+
+\subsection*{{\color{blue}Física 1. Prova 1.}}
+
+\vspace{0.1 in}
+\noindent
+\textbf{Nome Completo:} \noindent\rule{11cm}{0.5pt} 
+
+{\color{blue}\textbf{1)}} Um elevador com massa total $M$ desce com velocidade inicial $v_0$. Enquanto diminui sua velocidade o elevador percorre uma distância $H$ até o repouso com aceleração constante. a) Qual a aceleração do elevador nesse período? b) A mulher (de massa $m$) dentro do elevador está sobre uma balança. Qual a leitura da balança? Considere a aceleração da gravidade como sendo $g$. (Veja que trata-se de um problema literal, sem necessidade de substituir valores numéricos.)
+
+\vspace{0.2 in}
+
+{\color{blue}\textbf{2)}} Um pequeno carro de controle remoto de massa $m$ se move com velocidade $v_0$ em um círculo vertical dentro de um cilindro metálico oco de raio $R$, (veja figura \ref{globo-morte}). a) Calcule a magnitude da força normal exercida pelas parede do cilindro no carro no ponto A. Encontre a resposta literal (sem substituir os valores numéricos). b) Calcule a mesma magnitude no ponto B. c) Qual a velocidade mínima que o carrinho deve ter para completar o \textit{loop}? d) A resposta do item c) faz sentido?
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=1.2 in]{figuras/elevador.png}
+\label{elevador}
+}
+\subfigure{b)
+\includegraphics[width=1.9 in]{figuras/globo-morte.pdf}
+\label{globo-morte}
+}
+\subfigure{c)
+\includegraphics[width=2.3 in]{figuras/balanco.png}
+\label{balanco}
+}
+\subfigure{d)
+\includegraphics[width=1.4 in]{figuras/plano_incl.png}
+\label{plano_incl}
+}
+\subfigure{e)
+\includegraphics[width=1.8 in]{figuras/felix.jpg}
+\label{felix}
+}
+\caption{ \subref{elevador} Figura referente ao problema 1. \subref{globo-morte} Globo da morte: geometria referente ao problema 2. O ponto A é o mais baixo do círculo e o B o mais alto. \subref{balanco} Figura referente ao problema 3. \subref{plano_incl} Figura referente ao problema 4. \subref{felix} Figura referente ao problema 5.}
+\end{figure}
+
+{\color{blue}\textbf{3)}} Um balanço gigante de um parque de diversões consiste em um eixo vertical central com diversos braços horizontais ligados em sua extremidade superior (figura \ref{balanco}). Cada braço suspende um assento por meio de um cabo de $L=$ 5,0 m de comprimento, e a extremidade superior do cabo está presa ao braço a uma distância de $D=$ 3,0 m do eixo central. a) Calcule o tempo $T$ para uma revolução do balanço quando o cabo que suporta o assento faz um ângulo de $\theta =\pi/6 =$ 30 graus com a vertical. Encontre a resposta literal. Apenas depois substitua os valores numéricos. b) O ângulo depende do passageiro para uma dada taxa de revolução?
+
+\vspace{0.2 in}
+
+{\color{blue}\textbf{4)}} Um bloco está em repouso sobre um plano inclinado como ilustrado na figura \ref{plano_incl}. O  coeficiente de atrito estático entre o bloco e o plano é $\mu_e$. Calcule o ângulo máximo $\theta$ de inclinação do plano de modo que o objeto continue em repouso. b) Por que essa resposta não depende da massa?
+
+
+
+\vspace{0.2 in}
+
+{\color{blue}\textbf{5) Bônus.}} Em 14 de outubro de 2012, o austríaco Felix Baumgartner saltou de uma altitude de 38.964,4 m, quase 39 km, veja figura \ref{felix}. Ele caiu sob ação da força da gravidade e da resistência do ar por 36 km até abrir o pára-quedas e atingiu uma velocidade máxima de 1.357,6 km/h. Um dos recordes estabelecidos na época foi ser a primeira pessoa a quebrar a barreira do som (1.236 km/h) sem ser impulsionado por algum tipo de motor. a) Desprezando a resistência do ar, calcule qual seria a velocidade no instante em que Felix abre o pára-quedas. b) A resistência do ar é uma força contrária ao movimento proporcional a velocidade $F_1 = -kv$ para velocidades baixas. Mostre que
+\begin{equation}
+v(t) = v_t \left[ 1- e^{-(k/m)t} \right] \nonumber
+\end{equation}
+onde $v_t = (mg)/k$, é solução da Lei de Newton para este movimento. b) Quando a velocidade é alta a força de resistência do ar é proporcional a $F_2 = -kv^2$. Escreva a Lei de Newton para este caso. Lembre-se das derivadas:
+\begin{equation}
+\dfrac{d}{dt} (e^{pt}) = p e^{pt}, \qquad \qquad \dfrac{d}{dt}\left[ f(t)+g(t) \right] = \dfrac{df}{dt} +\dfrac{dg}{dt}, \nonumber
+\end{equation}
+onde $p$ é uma constante e $f$ e $g$ são funções do tempo.
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+
+\begin{flushright}
+\begin{small}
+\textbf{Inspiração:}
+\textit{ Deixe-me dizer algo que você já sabe. O mundo não é apenas sol e arco-íris. É um lugar maldoso e asqueroso e não importa quão forte você seja, ele vai te bater até você ficar de joelhos e te deixar assim enquanto você permitir. Você, eu, e ninguém mais, irá bater tão forte quanto a vida. Mas o importante não é o quão forte você consegue bater. O importante é o quão forte você consegue aguentar e continuar andando de cabeça erguida. Isso é vitória. Se você sabe o seu valor, então corra atrás do que você merece. Mas você tem que querer aguentar as pancadas da vida, e não apontar dedos culpando os outros. Covardes fazem isso e você não é um covarde. Você é melhor que isso.}  
+\textbf{Rocky Balboa}
+\end{small}
+\end{flushright}
+
+
+\end{document}
+
+
+

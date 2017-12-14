@@ -63,20 +63,21 @@ def serie_fourier(x, n_max, A, y0 = -1):
 ########################################################
 
 #Intervalo em x
-x = np.linspace(-2*math.pi,2*math.pi,1000)
+x = np.linspace(-4*math.pi,4*math.pi,1000)
 
-T = 2*math.pi #periodo
-A = 4 #amplitude
+T = 3*math.pi #periodo
+A = 2 #amplitude
 y0 = 0 #opcional
 #N_harm = 14 #numero de termos na expansao de Fourier
 
 f = onda_quadrada(x, T, A, y0) #expressao analitica da funcao a ser expandida
-g2 = serie_fourier(x, 2, A, y0) #expansao considerando 2 termos
+g4 = serie_fourier(x, 4, A, y0) #expansao considerando 2 termos
 g10 = serie_fourier(x, 10, A, y0) #expansao considerando 10 termos
+g20 = serie_fourier(x, 20, A, y0) #expansao considerando 10 termos
 
 
 plt.plot(x, f, 'b', lw = 2, label=r'$f(x)$')
-plt.plot(x, g2, 'k', lw = 2, label=r'$g_2(x)$')
+plt.plot(x, g4, 'k', lw = 2, label=r'$g_4(x)$')
 plt.plot(x, g10, 'r', lw = 2, label=r'$g_{10}(x)$')
 plt.title('Onda quadrada.')
 plt.legend(loc='lower left',fontsize = 14)
