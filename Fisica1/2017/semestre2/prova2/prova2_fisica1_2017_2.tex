@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathpazo} 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%para criar o espacamento usual no primeiro paragrafo
+%\usepackage{indentfirst}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\setlength{\parindent}{0em} %altera o espacamento do paragrafo
+\setlength{\parskip}{1em}  %altera o espaco entre dois paragrafos
+\renewcommand{\baselinestretch}{1.1} %altera o espacamento entre as linhas
+
+\begin{document}
+
+\subsection*{{\color{blue}Jataí, 15 de Dezembro, 2017. UFG. Prof. Paulo Freitas Gomes.}}
+
+\subsection*{{\color{blue}Física 1. Prova 2.}}
+
+\vspace{0.1 in}
+\noindent
+\textbf{Nome Completo:} \noindent\rule{11cm}{0.5pt} 
+
+{\color{blue}\textbf{1)}} Você é membro de uma equipe de resgate nos Alpes Suícos e deve arremessar uma caixa de suprimentos de baixo para cima de uma encosta com ângulo de inclinação constante $\alpha$. A caixa deve chegar a um esquiador em apuros a uma distância vertical $h$ acima da base da encosta. Apesar de escorregadia há um atrito entre a superfície da encosta e a caixa com coeficiente de atrito cinético $\mu$. Qual a velocidade escalar mínima que você deve imprimir à caixa na base da encosta de modo que ela atinja o esquiador?
+\vspace{0.2 in}
+
+
+
+{\color{blue}\textbf{2)}} O sistema de duas latas de tinta ligadas por uma corda leve é libertado do equilíbrio quando a lata de massa $M=$ 12 kg está a uma altura $H=$ 2 m acima do solo, veja figura \ref{blocos}. Despreze o atrito e a inércia da polia e considere $m=$ 4 kg. Nos itens a) e b) encontre a expressão literal primeiro depois calcule o valor numérico. a) Calcule a velocidade dessa lata quando ela atinge o solo. b) Calcule a altura $L$ que a lata de massa $m$ sobe após esse instante.
+
+\vspace{0.2 in}
+
+{\color{blue}\textbf{3)}} \textbf{Montanha russa}. Considere a motanha russa ilustrada na figura \ref{montanharussa}, na qual o carrinho tem massa $M$ e inicia o percurso do repouso no ponto A de uma altura $H$. Despreze qualquer atrito. a) Qual a velocidade do carrinho no ponto B, de altura é $D$? b) Em qual ponto de todo o trajeto em questão o carrinho tem a maior velocidade? Por que? c) Qual é essa velocidade? Curiosidade: a montanha russa mais alta do mundo tem $H=$ 139 metros.
+
+
+\vspace{0.2 in}
+
+
+
+{\color{blue}\textbf{4)}} \textbf{Física aplicada a natação}. Sara Sjöström é uma nadadora sueca e atualmente tem 4 recordes mundiais estabelecidos (o grande Michael Phelps tem 3 recordes). Um de seus recordes é na prova de 50 metros nado livre, com o tempo de 23.67 segundos. Podemos considerar com boa aproximação que a nadadora executa a prova com uma velocidade constante. A força de arraste de um fluido sobre um corpo é $F_a=(1/2)\rho A C v^2$, onde $\rho$ é a densidade do fluido, $A$ é a área da seção transversal do corpo, $C$ é o coeficiente de arraste e $v$ a velocidade do corpo. a) Mostre que a potência $P=dW/dt$ para uma força e velocidade constante e uma trajetória retilínea pode ser escrita como $P = \vec{F} \cdot \vec{v}$. b) Mostre que neste problema a velocidade pode ser escrita como:
+\begin{equation}
+v = \sqrt[3]{\dfrac{2P}{\rho A C}}. \label{desejada}
+\end{equation}
+c) Suponha que após estabelecer o recorde mundial, Sara continue treinando arduamente. Em um belo dia, ela consegue executar a prova com o dobro de potência utilizada quando ela estabeleceu o recorde mundial nos 50 metros nado livre. Ela questiona então se o tempo reduziria pela metade. Qual seria a nova marca para seu tempo nesse caso?
+
+\vspace{0.2 in}
+
+{\color{blue}\textbf{5)}} Uma força conservativa paralela ao eixo $x$ atua sobre uma partícula que se desloca ao longo do mesmo eixo. A energia potencial correspondente está graficada na figura \ref{potencial_grafico}. A partícula é libertada a partir do repouso no ponto A. a) Qual o sentido da força no ponto A? b) E no ponto B? c) Para qual valor de $x$ (com uma casa após a vírgula de precisão) sua energia cinética é máxima? d) Qual o valor máximo de $x$ atingido pela partícula durante seu movimento? e) Para quais valores de $x$ a partícula está em equilíbrio estável? f) Onde ela está em equilíbrio instável?
+
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=1.8 in]{blocos.png}
+\label{blocos}
+}
+\subfigure{b)
+\includegraphics[width=4.3 in]{montanha_russa2.pdf}
+\label{montanharussa}
+}
+\subfigure{c)
+\includegraphics[width=3.5 in]{sara3.jpg}
+\label{sara2}
+}
+\subfigure{d)
+\includegraphics[width=2.7 in]{potencial_grafico2.png}
+\label{potencial_grafico}
+}
+\caption{ \subref{blocos} Figura referente ao problema 2. \subref{montanharussa} Ilustração de uma montanha russa referente ao problema 3. \subref{sara2} Nadadora sueca Sara Sjöström. \subref{potencial_grafico} Gráfico do potencial referente ao problema 5.}
+\end{figure}
+
+
+\begin{center}
+\noindent\rule{13cm}{0.5pt}
+\end{center}
+
+\begin{flushright}
+\begin{small}
+\textbf{Inspiração:}
+{\color{blue}\textit{
+Chegará o momento que incansáveis pesquisas por longos períodos trarão à luz coisas que agora estão escondidas. Uma única vida, mesmo que inteiramente dedicada ao céu, não é suficiente para a investigação de um assunto tão vasto... E, portanto, esse conhecimento será revelado apenas depois de várias gerações. Chegará um momento em que nossos descendentes se surpreenderão com o fato de não sabermos coisas tão claras para eles... Muitas descobertas são reservadas para épocas ainda futuras, quando a memória de nossa geração já estará apagada. Nosso universo é um pequeno caso desinteressante, a menos que exista nele algo para cada geração investigar... A natureza não revela seus mistérios de uma vez por todas.}}  \\
+\textbf{Seneca, Natural Questions, livro 7, século I.}
+\end{small}
+\end{flushright}
+
+
+\newpage
+{\color{blue}\textbf{4)} Gabarito} 
+
+a) Para uma força constante ao longo de uma trajetória retilínea, o trabalho é escrito como:
+\begin{eqnarray}
+W = \int_{\textbf{a}}^{\textbf{b}} \textbf{F} \cdot d \textbf{r} = \textbf{F} \cdot \int_{\textbf{a}}^{\textbf{b}}  d \textbf{r} = \textbf{F} \cdot \textbf{d}, \nonumber
+\end{eqnarray}
+onde $\textbf{d} = \textbf{b} - \textbf{a}$ é o vetor deslocamento. A potência será:
+\begin{eqnarray}
+P = \dfrac{dW}{dt} = \dfrac{d}{dt} (\textbf{F} \cdot \textbf{r}) = \textbf{F} \cdot \dfrac{d \textbf{r}}{dt} =   \textbf{F} \cdot \textbf{v}, \nonumber
+\end{eqnarray}
+já que $\textbf{v} = d\textbf{r}/dt$ é a definição de velocidade.
+
+b) Dado que o deslocamento e a força da nadadora durante a prova são paralelos, o ângulo entre eles é 0. Logo $P = Fv$. Usando $F=F_a$ temos:
+\begin{equation}
+P =F_a v =  \dfrac{1}{2}\rho A C v^2 v = \dfrac{1}{2}\rho A C v^3. \nonumber
+\end{equation}
+Isolando $v$:
+\begin{equation}
+v^3 = \dfrac{2P}{\rho A C}. \nonumber
+\end{equation}
+Agora, elevamos os dois lados dessa equação a um terço, já que $(v^3)^{1/3} = v$:
+\begin{equation}
+ v = \left(  \dfrac{2P}{\rho A C} \right)^{1/3} = \sqrt[3]{\dfrac{2P}{\rho A C}}, \nonumber
+\end{equation}
+como desejado.
+
+
+c) Suponha que na prova do recorde mundial, $\tau_0 =$ 23.67 s, Sara tenha desenvolvido uma potência $P_0$. A distância percorrida é $D =$ 50 metros. Usando a velocidade média na prova $v = D/\tau$ na Eq. \ref{desejada} temos:
+\begin{equation}
+\tau = D\sqrt[3]{\dfrac{\rho A C}{2P}}. \nonumber
+\end{equation} 
+Na segunda vez que Sara fez a prova ela obteve $\tau_1$ para o tempo e $P_1$ para a potência. Logo
+\begin{equation}
+\tau_0 = D\sqrt[3]{\dfrac{\rho A C}{2P_0}}, \qquad \tau_1 = D\sqrt[3]{\dfrac{\rho A C}{2P_1}}. \nonumber
+\end{equation} 
+Dividindo uma equação pela outra temos:
+\begin{equation}
+\dfrac{\tau_1}{\tau_0} = \dfrac{D\sqrt[3]{\dfrac{\rho A C}{2P_1}}}{D\sqrt[3]{\dfrac{\rho A C}{2P_0}}} = \dfrac{\sqrt[3]{\dfrac{1}{P_1}}}{\sqrt[3]{\dfrac{1}{P_0}}} = \sqrt[3]{\dfrac{P_0}{P_1}}. \nonumber
+\end{equation}
+Mas $P_1=2P_0$, logo:
+\begin{equation}
+\tau_1 = \tau_0 \sqrt[3]{\dfrac{P_0}{2P_0}} = \dfrac{\tau_0}{\sqrt[3]{2}}. \nonumber
+\end{equation}
+Calculando o valor numérico temos $\tau_1 = 33.67/\sqrt[3]{2} \approx$ 18.79 s. Apesar de dobrar a potência, o tempo não foi reduzido pela metade, mas de apenas $1-18.79/23.67 \approx$ 20 \%.
+
+
+\end{document}
+
+
+
