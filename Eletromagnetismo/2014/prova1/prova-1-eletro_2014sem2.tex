@@ -1,0 +1,140 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+
+\begin{document}
+
+\noindent
+
+\section*{Prova 1, 08/09/2014, Prof. Paulo Freitas Gomes}
+
+\section*{Eletromagnetismo. Curso: Física}
+
+\vspace{0.3 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.1 in}
+
+Dados: $\varepsilon_0 = 8,85\times 10^{-12}$ C$^2$N$^{-1}$m$^{-2}$, carga elementar do elétron $-e= -1,6\times 10^{-19}$ C, volume da esfera $\dfrac{4}{3}\pi r^3$, área da esfera $4\pi r^2$. Use $\tau$ para o volume. %Escolha apenas 2 problemas para resolver.
+
+\vspace{0.1 in}
+
+1) Seja um fio longo reto infinito com uma densidade linear de carga $\lambda$. O campo elétrico gerado por este fio é:
+\begin{equation}
+\vec{E} = \dfrac{1}{4\pi \varepsilon_0} \dfrac{2\lambda}{s} \hat{s} \nonumber
+\end{equation}
+Encontre o potencial $V(s)$ gerado pelo fio. Mostre que seu potencial satisfaz: $\vec{E} = - \vec{\nabla} V(s)$. As coordenadas cilíndricas são ($s,\phi,z$) tais que $s^2 = x^2 + y^2$ e $\tan \phi = \dfrac{y}{x}$. 
+
+\vspace{0.1 in}
+
+2) a) Seja uma esfera rígida sólida uniformemente carregada de raio $R$ e carga $q$. Qual o campo elétrico fora da esfera ($r>R$)? b) Encontre a energia desta esfera que está armazenada no campo elétrico. Ajuda: dentro da esfera ($r<R$) o campo é:
+\begin{equation}
+\vec{E} = \frac{q}{4\pi \varepsilon_0} \dfrac{r}{R^3}\hat{r} \nonumber
+\end{equation}
+
+%3) Encontre o campo elétrico dentro de uma esfera que contém uma densidade de carga proporcional a distância da origem: $\rho = kr$, onde $k$ é uma constante. Dica: esta densidade não é constante e vc deve integrá-la para obter a carga total. 
+
+ \subsection*{Fórmulas para consulta}
+ 
+ 
+\begin{equation}
+V(s) = - \int_{\Re}^s \vec{E} \cdot d\vec{l} \quad \quad V(\Re) = 0 \quad \quad \int_a^b \dfrac{dx}{x} = \ln b - \ln a = \ln \dfrac{b}{a} \quad \quad   W = \frac{1}{2}\varepsilon_0 \int_{\Omega} E² d\tau   \nonumber 
+\end{equation} 
+%\vspace{0.01 in} 
+ 
+\begin{equation}
+ \quad \quad d\tau = dxdydz = sdsd\phi dz = r^2 dr \sin \theta d\theta d\phi \quad \quad \int_a^b x^n dx = \dfrac{b^{n+1}-a^{n+1}}{n+1} \nonumber 
+\end{equation} 
+%\vspace{0.01 in}
+
+\begin{equation}
+\vec{F} = \dfrac{Q_1Q_2}{4\pi \varepsilon_0 r^2}\hat{r} \quad \quad \vec{\nabla} \cdot \vec{E} = \dfrac{\rho}{\varepsilon_0} \quad \quad  \int_S \vec{E} \cdot d\vec{A} = \dfrac{Q_S}{\varepsilon_0}  \quad \quad W = \frac{1}{2} \int \rho V d\tau  \quad \quad \vec{\nabla} \times \vec{E} = 0 \nonumber 
+\end{equation} 
+
+%\vspace{0.01 in}
+
+\begin{equation}
+ \vec{\nabla} = \hat{x}\dfrac{\partial}{\partial x}+\hat{y}\dfrac{\partial}{\partial y}+\hat{z}\dfrac{\partial}{\partial z}   =  \hat{s}\dfrac{\partial}{\partial s}+\dfrac{\hat{\phi}}{s}\dfrac{\partial}{\partial \phi}+\hat{z}\dfrac{\partial}{\partial z} \quad \quad Q = \int_{\Omega} \rho (r) d\tau \nonumber 
+\end{equation} 
+
+
+
+ 
+\end{document}
+
+
+

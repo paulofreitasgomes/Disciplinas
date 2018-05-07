@@ -1,0 +1,143 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+
+%colocar cores nas fontes
+\usepackage{color}
+%\usepackage[usenames,dvipsnames]{color}
+
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+
+\begin{document}
+
+\hsize = 6.5 in
+\hoffset = -0.5 in
+\vsize = 9 in
+\voffset = -0.5 in
+
+
+
+\section*{{\color{red}Gabarito}}
+
+\section*{Prova 1, 08/09/2014, Prof. Paulo Freitas Gomes}
+
+\section*{Eletromagnetismo. Curso: Física}
+
+\vspace{0.1 in}
+\noindent
+{\color{blue}1) Solução}: A trajetória do entre os limites é na direção perpendicular ao eixo do fio, logo $l=s$. Vamos supor que o referencial seja na posição $s=\Re =a$, de forma que $V(a) = 0$.  O campo  $\vec{E}$ do fio é perpendicular ao eixo do fio (eixo $z$), de forma que ele é paralelo ao vetor $d\vec{l} = d\vec{s}$. Sendo paralelo, temos que $\vec{E} \cdot d\vec{l} = Edl \cos \theta = Eds$, já que $\theta = 0$. Usando tudo isso, temos que da definição de potencial:
+\begin{equation}
+V(s) = - \int_{\Re}^s \vec{E} \cdot d\vec{l} = - \int_a^s E ds = - \dfrac{\lambda}{2\pi \varepsilon_0}\int_a^s \dfrac{ds}{s} =  {\color{blue}\boxed{-\dfrac{\lambda}{2\pi \varepsilon_0 } (\ln s - \ln a)}} \nonumber
+\end{equation}
+ Usei também a integral de $\int_a^b \dfrac{dx}{x} = (\ln b - \ln a) $ dada no formulário da prova. Nesta expressão vemos por que não podemos assumir o referencial no infinito ($a=\infty$) ou na superfície do fio ($a=0$), pois em ambos os casos $\ln a$ não está definido. {\color{red}2,5 pontos}.
+
+\noindent
+Para a segunda pergunta, vou calcular o gradiente de $V(s)$, usando a definição do vetor $\vec{\nabla}$ em coordenadas cilíndricas dada na prova. Temos que:
+\begin{equation}
+ \dfrac{\partial V(s)}{\partial \phi} = \dfrac{\partial V(s)}{\partial z} = 0 \nonumber
+\end{equation}
+Logo:
+\begin{eqnarray}
+-\vec{\nabla} V(s) &=&  \hat{s} \dfrac{\partial}{\partial s} \left[ \dfrac{\lambda}{2\pi \varepsilon_0 } (\ln s - \ln a) \right]
+=  \hat{s} \dfrac{\lambda}{2\pi \varepsilon_0 } \dfrac{\partial}{\partial s} (\ln s - \ln a) =  {\color{blue}\boxed{ \dfrac{\lambda}{2\pi \varepsilon_0 s}\hat{s}}} \nonumber 
+\end{eqnarray}
+O último termo é exatamente o campo dado no enunciado. Usei nessa dedução $\dfrac{\partial}{\partial s}(\ln s)  = \dfrac{1}{s}$. {\color{red}2,5 pontos}.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+\vspace{0.1 in}
+
+\noindent
+{\color{blue}2a) Solução}: O campo elétrico de uma esfera rígida, sólida, de raio $R$ e carga $q$, fora da esfera ($r>R$) é igual ao campo de uma carga pontual $q$:
+\begin{equation}
+{\color{blue}\boxed{\vec{E}_f = \dfrac{q}{4\pi \varepsilon_0 r^2}\hat{r}}} \label{campoforadaesfera}
+\end{equation}
+{\color{red}1 ponto.}
+
+\noindent
+{\color{blue}2b) Solução}: A densidade de energia armazenada no campo elétrico é $u = \frac{1}{2}\varepsilon_0 E^2$, onde $E=\vert \vec{E} \vert$. Assim, para encontrar a energia total $W$ devemos integrar a densidade de energia em todo o espaço, tanto dentro quanto fora da esfera. O campo fora da esfera é dado pela eq. \ref{campoforadaesfera} e o campo $\vec{E}_d$ dentro da esfera  é dado no enunciado. Integrando nas coordenadas esféricas ($r,\theta,\phi$), teremos:
+\begin{eqnarray}
+W &=& \frac{1}{2}\varepsilon_0 \int_{\Omega} E^2 d\tau = \frac{1}{2}\varepsilon_0 \int_0^{2\pi} d\phi \int_0^{\pi} d\theta \int_0^{\infty} E^2 r^2\sin \theta dr d\theta d\phi \nonumber \\
+ &=& \frac{1}{2} 2\pi \varepsilon_0 \int_0^{\pi} \sin \theta d\theta \left( \int_0^R E_d^2 r^2 dr + \int_R^{\infty} E_f^2 r^2 dr \right)  \nonumber \\
+ &=& 2\pi \varepsilon_0\dfrac{q^2}{(4 \pi \varepsilon_0)^2} \left( \int_0^R \dfrac{r^2}{R^6} r^2 dr + \int_R^{\infty} \dfrac{r^2 dr}{r^4}  \right) = \dfrac{q^2}{8\pi\varepsilon_0} \left( \int_0^R \dfrac{r^4}{R^6} dr + \int_R^{\infty} \dfrac{dr}{r^2} \right) \nonumber \\
+ &=&  \dfrac{q^2}{8\pi\varepsilon_0} \left( \dfrac{r^5}{5R^6}\biggr\rvert_0^R  - \dfrac{1}{r}\biggr\rvert_R^{\infty} \right) = \dfrac{q^2}{8\pi\varepsilon_0} \left( \dfrac{1}{5R}  + \dfrac{1}{R} \right)  =  {\color{blue}\boxed{\dfrac{1}{4\pi \varepsilon_0} \dfrac{3q^2}{5R}}}   \nonumber
+\end{eqnarray} 
+Quanto maior o raio $R$, menor a energia, pois maior é a distância final entre os elementos de carga que formam $q$. A integral em $\phi$ é direta e em $\theta$ é igual a 2, pois $\int \sin \theta d\theta = - \cos \theta$. Os campos dependem apenas de $r$, com expressões diferentes para dentro ($r<R$) e fora ($r>R$) da esfera. {\color{red}4 pontos.}
+
+ 
+\end{document}
+
+
+

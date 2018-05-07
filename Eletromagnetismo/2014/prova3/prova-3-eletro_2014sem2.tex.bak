@@ -1,0 +1,195 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+%colocar texto do lado de figuras
+\usepackage{wrapfig}
+
+
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%editar captions
+%\usepackage{floatrow}
+%\usepackage{caption}
+
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%\nopagenumbers
+
+%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+%\usepackage{xcolor}
+
+%\setlength\headheight{26pt} %% just to make warning go away. Adjust the value after looking into the warning.
+%\rhead{{\color{blue}\rule{1cm}{1cm}}}
+%\rhead{\includegraphics[width=1 in]{logo_ufg1.jpg}}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+\hsize = 7.0 in
+\hoffset = -0.8 in
+\voffset = -0.4 in
+\vsize = 8.5 in
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+\vspace{1.0 in}
+
+\subsection*{Jataí, 05/11/14. Universidade Federal de Goiás - Campus Jataí.}
+
+\subsection*{Prova 3. Curso: Física. Eletromagnetismo. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.5 in}
+\noindent
+Nome Completo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_\_
+
+
+\vspace{0.2 in}
+
+
+\noindent
+1) Antes da popularização do CD e do mp3, músicas eram vendidas através dos LPs e das fitas K7. Os LPs são grandes discos colocados para girar, e através de uma agulha que fica deslizando sobre sua superfície, a música é gerada (veja figura \ref{disco}). O grande tamanho permitia que as bandas explorassem bastante a capa, com artes bem elaboradas (veja figura \ref{ironmaiden}). Ainda hoje existem os chamados Clube do Vinil (material que compões os discos), no qual apaixonados ainda escutam suas músicas preferidas usando o bom e velho bolachão. a) Os CDs (também em declínio) são mais práticos e os mp3 são fáceis de serem compartilhados. Porém, em termos de qualidade, quais os pontos positivos do LP? b) Suponha agora que um disco LP de raio $R$, que carrega uma densidade uniforme de carga superficial $\sigma$, é colocado para girar com uma velocidade angular $\omega$ constante. Encontre sua densidade superficial de corrente $\vec{K}$. c) Encontre seu dipolo magnético $\vec{m}$.  
+
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.5 in]{disco.jpg}
+\label{disco}
+}
+\subfigure{b)
+\includegraphics[width=3.5 in]{ironmaiden.jpeg}
+\label{ironmaiden}
+}
+\caption{\subref{disco} Um disco LP colocado no tocador. A peça metálica sobre o disco contém a agulha que fica apoiada sobre ele. \subref{ironmaiden} Fear of the Dark, da banda inglesa Iron Maiden, lançado em 1980.}
+\end{figure}
+\vspace{0.2 in}
+
+\noindent
+2) Um brinquedo envolvendo magnetismo consiste de discos com momento de dipolo magnético com um furo no meio, veja figura \ref{Magnetic}. O disco apoiado na base é chamado de disco 1, o próximo acima de 2, e sucessivamente... Os discos ficam alinhados ao longo de um eixo (direção $\hat{z}$) que proibe seu movimento horizontal. O momento de dipolo aponta na direção perpendicular do plano dos discos: $\vec{m}  \parallel  \hat{z}$. a) Se você colocar dois discos com momentos antiparalelo ($\vec{m}_1 =- \vec{m}_2 = m\hat{z}$) , o disco 2 (de cima) irá flutuar, veja figura \ref{2magnet}. Por que o disco de cima flutua? Faça o diagrama de corpo livre desse disco 2. b) Qual a distância $z$ entre os discos nesse equilíbrio?  c) Consideremos agora um terceiro disco. Suponha que  $\vec{m}_1 = \vec{m}_2 = \vec{m}_3 = m\hat{z}$. Qual a distância entre discos sucessivos? d) Se você agora montar a configuração com $\vec{m}_1 = -\vec{m}_2 = \vec{m}_3 = m\hat{z}$, a distância entre os discos 1 e 2 é $x$, enquanto que a distância entre os discos 2 e 3 é $y$ (veja figura \ref{3magnet}). Mostre que a relação entre essas distâncias pode ser escrita como:
+\begin{equation}
+\dfrac{1}{x^4} - \dfrac{2}{y^4} + \dfrac{1}{(x+y)^4} = 0 \nonumber
+\end{equation}
+
+
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=1.2 in]{Magnetic.jpg}
+\label{Magnetic}
+}
+\subfigure{b)
+\includegraphics[width=1.7 in]{2discos.pdf}
+\label{2magnet}
+}
+\subfigure{c)
+\includegraphics[width=1.7 in]{3magnet.pdf}
+\label{3magnet}
+}
+\caption{\subref{Magnetic} Magnetos para demonstração. \subref{2magnet} Ilustração do brinquedo com dois discos. A distância entre os discos é $z$. \subref{3magnet} Ilustração do brinquedo com três discos. A distância entre o disco do meio e o de baixo é $x$ enquanto que a distância entre o do meio e o de cima é $y$.}
+\end{figure}
+
+
+
+\vspace{0.2 in}
+
+\textbf{Fórmulas para consulta}
+
+
+\begin{equation}
+ \vec{K} = \sigma \vec{v} = \dfrac{di}{dl_{\perp}} \hat{n} \quad \quad \vec{F} = \vec{\nabla} (\vec{m} \cdot \vec{B})  \quad \quad \vec{B}_d (\vec{r}) = \dfrac{\mu_0 m}{4\pi r^3}(2\hat{r} \cos \theta + \hat{\theta} \sin \theta )   \nonumber 
+\end{equation} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+\end{document}
+
+
+

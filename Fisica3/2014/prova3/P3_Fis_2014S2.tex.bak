@@ -1,0 +1,167 @@
+\documentclass[openany,oneside,paper=a4, fontsize=11pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+\hsize = 7.0 in
+\hoffset = -0.8 in
+\voffset = -0.4 in
+\vsize = 8.5 in
+
+\subsection*{Jataí, 31/10/14. Universidade Federal de Goiás - Campus Jataí.}
+
+\subsection*{Prova 3, Física 3. Licenciatura em Física. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.2 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_\_
+
+\vspace{0.2 in}
+
+Dados: $\mu_0 = 4\pi \times 10^{-7}$ Tm/A, carga do elétron = $e=1,6\times 10^{-19}$ C.
+
+\vspace{0.2 in}
+
+1) Antes da popularização do CD e do mp3, músicas eram vendidas através dos LPs e das fitas K7. Os LPs são grandes discos colocados para girar, e através de uma agulha que fica deslizando sobre sua superfície, a música é gerada (veja figura \ref{disco}). O grande tamanho permitia que as bandas explorassem bastante a capa, com artes bem elaboradas (veja figura \ref{ironmaiden}). Ainda hoje existem os chamados Clube do Vinil (material que compões os discos), no qual apaixonados ainda escutam suas músicas preferidas usando o bom e velho bolachão. a) Os CDs (também em declínio) são mais práticos e os mp3 são fáceis de serem compartilhados. Porém, em termos de qualidade, quais os pontos positivos do LP? b) Um disco dielétrico fino, com raio $a$, possui uma carga total $+Q$ distribuída uniformemente sobre sua superfície. Ele gira $f$ vezes por segundo em torno de um eixo perpendicular à sua superfície, passando por seu centro. Calcule o campo magnético no centro do disco. 
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.0 in]{figuras/disco.jpg}
+\label{disco}
+}
+\subfigure{b)
+\includegraphics[width=3.0 in]{figuras/ironmaiden.jpeg}
+\label{ironmaiden}
+}
+\caption{\subref{disco} Um disco LP colocado no tocador. A peça metálica sobre o disco contém a agulha que fica apoiada sobre ele. \subref{ironmaiden} Fear of the Dark, da banda inglesa Iron Maiden, lançado em 1980.}
+\end{figure}
+
+\vspace{0.2 in}
+
+2) \textbf{Momento magnético do átomo de hidrogênio}. No modelo de Bohr do átomo de hidrogênio, no seu estado mais inferior de energia, o elétron orbita o próton a uma velocidade escalar de $3\times 10^6$ m/s, em uma órbita circular com raio igual a $6\times 10^{-11}$ m (veja figura \ref{eletron}). Perguntas: a) Qual o período orbital $T$ do elétron? b) O movimento do elétron em torno do núcleo constitui uma corrente elétrica $I$, ou igualmente, uma espira com corrente. Calcule essa corrente. c) Calcule o momento de dipolo magnético dessa corrente. d) Essa descrição do movimento orbital do elétron é útil pois traz resultados compatíveis com o experimento. Porém, esse movimento é real? O elétron realmente revoluciona em torno do núcleo? e) O que de fato acontece?
+
+
+%\vspace{0.2 in}
+
+\newpage
+
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=2.3 in]{figuras/eletron.pdf}
+\label{eletron}
+}
+\subfigure{b)
+\includegraphics[width=3.0 in]{figuras/fio.pdf}
+\label{fio}
+}
+\caption{\subref{eletron} Geometria referente ao problema 2. \subref{fio} Figura referente ao problema 3.}
+\end{figure}
+
+3) Um fio longo que transporta uma corrente de 4,0 A faz duas dobras de 90$^{\circ}$, como indica a figura \ref{fio}. A parte dobrada do fio atravessa um campo magnético uniforme de 0,2 T, orientado como indica a figura e confinado a uma região limitada no espaço. Determine o vetor força que o campo magnético exerce sobre o fio.
+
+\vspace{0.2 in}
+
+\begin{SCfigure}
+\centering
+\includegraphics[width=2.2 in]{figuras/espira777.pdf}
+\label{espira777}
+\caption{Geometria referente ao problema 4.}
+\end{SCfigure}
+
+4) Calcule o módulo do campo magnético resultante produzido no ponto P da figura \ref{espira777} em função de $R$, $I_1$ e $I_2$. O que sua expressão fornece quando $I_1=I_2$?
+ 
+
+
+
+\vspace{0.2 in}
+ 
+ \textbf{Fórmulas para consulta}
+
+\begin{equation}
+   \vec{F}_M = I \vec{L} \times \vec{B}  \quad \quad  v = \omega R  \quad \quad \omega = \dfrac{2\pi}{T} =  2\pi f  \quad \quad \vec{B} = \dfrac{\mu_0}{4\pi} q \dfrac{\vec{v} \times \hat{r}}{r^2}  \quad \quad \vec{\mu} = I\vec{A}  \nonumber
+\end{equation} 
+\vspace{0.1 in}
+\begin{equation}
+ \vec{B} = \dfrac{\mu_0}{4\pi}\int I\dfrac{d\vec{l} \times \hat{r}}{r^2} \quad \quad \hat{i} \times \hat{j} = \hat{k} \quad \quad \hat{j} \times \hat{k} = \hat{i}  \quad \quad  \hat{k} \times \hat{i} = \hat{j} \quad \quad  \vec{A} \times \vec{B} = -\vec{B} \times \vec{A} \nonumber
+\end{equation} 
+
+
+
+
+
+ 
+\end{document}
+
+
+

@@ -1,0 +1,405 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+%esse comando serve para deixar as equacoes mais curvadas, como no texto em latex
+\usefonttheme[onlymath]{serif}
+% porem lendo na internet vi que equacoes curvadas sao piores para visualizar no projetor
+%por isso o padrao das equacoes e nao curvada
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}  %interessante, uma barra amarela
+%\usetheme{Antibes}  %nao gostei
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}  %gostei desse
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden} 
+%\usetheme{Frankfurt} %gostei
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid} %essa e a mais comum
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%os comentarios abaixo referem-se ao Warsaw
+%\usecolortheme{albatross}
+\usecolortheme{beaver} %branco, mas ficou muito bonito com o warsaw
+%\usecolortheme{beetle} %fundo cinza
+%\usecolortheme{crane} %fundo branco mas barras de título amarelas
+%\usecolortheme{dolphin} %fundo branco mas com barras em degrade de claro para roxo claro, ficou bonito
+%\usecolortheme{dove}  %feio, fundo branco com barras de titulo tambem brancas
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale} %bonito, fundo branco e barras de titulo azul, igual ao madri sem habilitar nenhum colortheme
+%\usecolortheme{wolverine} % fundo branco e barras amarelas, feio
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
+}
+
+%para colocar figuras na barra de titulo dos slides
+\usepackage{textpos}
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+
+%transformar gif em jpg e depois usar eles como animacao
+\usepackage{animate}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%permite deixar esbranquicado um texto e ressaltar outro
+\setbeamercovered{transparent}
+
+%colocar o logo da universidade no meio embaixo em cada slide
+%\beamertemplatenavigationsymbolsempty
+%\setbeamertemplate{footline}[frame number]
+%\logo{\makebox[1\paperwidth]{\includegraphics[width=0.8cm,keepaspectratio]{figuras/ufglogonasa.pdf}}}
+
+%package para inserir unidades
+\usepackage{siunitx}
+
+
+\usepackage{verbatim}
+
+% package para escrever codigo no texto
+\usepackage{listings} 
+\usepackage{color} %permite definir cores
+
+%definicao de cores
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python, %definicao da linguagem a ser usada
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{red},
+  %stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Trilho de ar]{\textit{\textbf{Experimento do trilho de ar: verificação da Lei de Newton}}} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Paulo Freitas Gomes} % Your name
+\institute[UFG-Jataí] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+UAE de Ciências Exatas - Jataí \\ % Your institution for the title page
+Universidade Federal de Goiás \\
+\medskip
+\textit{paulofreitasgomes@ufg.br} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+%\setbeamercolor{normal text}{bg=red!20}
+
+%\setbeamercolor{background canvas}{bg=black}
+
+%\setbeamercolor{title}{fg=red!80!white,bg=red!20!black}
+
+\setbeamercolor{title}{fg=red!80!green}
+
+%remove os controles de navegacao
+\beamertemplatenavigationsymbolsempty 
+
+\begin{document}
+
+
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Conteúdo} 
+%%\tableofcontents 
+%\tableofcontents[hideallsubsections]
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+
+%para colocar a figura na barra do titulo em cada slide
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[width=2.0cm,keepaspectratio]{figuras/ufglogonasa.pdf}}
+\end{textblock*}}
+
+
+\section{Experimento}
+
+\begin{frame}
+\Huge{\centerline{{\color{blue}Experimento do trilho de ar}}}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Montagem Experimental}
+\begin{figure}
+\includegraphics[width=4.1 in]{figuras/trilhodear2.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Experimento}
+\begin{itemize}
+\item Uma massa $M$ repousa sobre um trilho de ar sem atrito ligado a outra massa suspensa $m$ suspensa.
+\item São medidos os valores de posição e tempo enquanto as massas se deslocam. Com esses, se calculam numericamente também os valores de velocidade e aceleração em função do tempo.
+\item A força peso da massa suspensa a puxa para baixo, movendo as duas massas. Aplicando a Lei de Newton em módulo temos:
+\begin{equation}
+F = mg = (M+m)a \label{acelrelakjhhh}
+\end{equation} 
+\item Objetivo: calcular a aceleração teórica $a$ usando a Eq. \ref{acelrelakjhhh} e comparar com o valor experimental.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dados experimentais}
+Velocidade e aceleração são calculados numericamente.
+\begin{figure}
+\includegraphics[width=3.7 in]{python/gtrilho_tudo.pdf}
+\end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Os dados ruins devem ser removidos}
+\begin{figure}
+\includegraphics[width=4.0 in]{python/gtrilho.pdf}
+\label{dadosexperimentaislll}
+\end{figure}
+\end{frame}
+
+
+
+\section{Cálculo numérico da derivada}
+
+
+
+%\begin{frame}
+%\Huge{\centerline{{\color{blue}Energia Nuclear}}}
+%\end{frame}
+%
+%\begin{frame}  
+%\frametitle{Estrutura do átomo}
+%       \begin{tabular}{cl}  
+%         \begin{tabular}{c}
+%           \includegraphics[width=2.0 in]{figuras/atomo3b.pdf}
+%           \end{tabular}
+%           & \begin{tabular}{l}
+%             \parbox{0.5\linewidth}{%  change the parbox width as appropiate
+%\begin{itemize}
+%\item Átomos $=$ núcleo $+$ eletrosfera. 
+%\item Núcleo dos átomos: formado por prótons e nêutrons. 
+%\item Reações nucleares alteram a quantidade de prótons e de nêutrons.
+%\end{itemize}
+%    }         \end{tabular}  \\
+%\end{tabular}
+%\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Velocidade e aceleração aproximadas}
+\begin{itemize}
+\item A definição de velocidade é:
+\begin{equation}
+v = \dfrac{dx}{dt} = \lim_{\Delta t \rightarrow 0} \dfrac{x(t+\Delta t) - x(t)}{\Delta t} \nonumber
+\end{equation} 
+\item O que fazemos então é aproximar pelo valor médio no intervalo. Assim, as derivadas para velocidade e aceleração ficam:
+\begin{eqnarray}
+v(t_i) &\simeq& \bar{v}(t_i) = \dfrac{x(t_{i+1}) - x(t_i) }{\Delta t} \label{velocidadeaproximada} \\
+a(t_i) &\simeq& \bar{a}(t_i) = \dfrac{v(t_i) - v(t_{i-1}) }{\Delta t}  \label{aceleracoaproximada}
+\end{eqnarray}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Cálculo em Python das Eqs. \ref{velocidadeaproximada} e \ref{aceleracoaproximada}:}
+\lstinputlisting[language=Python]{python/cal_vel_ace.py}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Velocidade e aceleração a partir das Eqs. \ref{velocidadeaproximada} e \ref{aceleracoaproximada}:}
+\begin{figure}
+\includegraphics[width=3.9 in]{python/gtrilho2.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados}
+\begin{itemize}
+\item As massas em gramas são $M=418.3 \pm 0.5$ e $m=10.0 \pm 0.5$. Vamos usar $g=9.80$ m/s$^2$. 
+\item Da Eq. \ref{acelrelakjhhh} a aceleração teórica (em m/s$^2$) e o erro propagado na divisão das massa será:
+\begin{equation}
+a = \dfrac{mg}{M+m} = 0.23 \pm 0.01 
+\end{equation}
+\item Do gráfico da aceleração, a aceleração experimental é a média $a_m = 0.21 \pm 0.04$ m/s$^2$.
+\item O valor experimental pode chegar até 0.25, englobando o valor teórico. 
+\item Vemos então que há uma boa concordância entre o experimental e o teórico.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Cálculo dos erros}
+\begin{eqnarray}
+(x \pm \Delta x) + (y \pm \Delta y) &=& (x+y) \pm (\Delta x + \Delta y) \nonumber \\
+\dfrac{x \pm \Delta x}{y \pm \Delta y} &=& \dfrac{x}{y} \pm \dfrac{x \Delta y + y \Delta x}{y^2} \nonumber \\
+c (x \pm \Delta x)  &=& cx \pm c \Delta x \nonumber \\
+\Delta x &=& \sqrt{\dfrac{1}{N-1} \sum_i^N \vert x_i - \bar{x} \vert^2} \nonumber \\
+\bar{x} &=& \dfrac{1}{N} \sum_i^N x_i \nonumber 
+\end{eqnarray}
+\end{frame}
+
+
+\section{Ajustes}
+
+
+\begin{frame}
+\frametitle{Ajustes linear e não linear}
+\begin{itemize} 
+\item Movimento de um sistema (composto por dois objetos) submetidos a uma força constante:
+\begin{equation}
+\vec{F} = m\vec{g} = m \dfrac{d^2 x}{dt^2} \hat{i} = m\vec{a} \label{dkslskwjwiwlkj}
+\end{equation}
+onde $x(t)$ é a posição do bloco no trilho. Supomos que no instante inicial $t_0=0$ temos $x(0)=x_0 = 0$ e $v(0)=v_0=0$. Resolvendo a equação diferencial \ref{dkslskwjwiwlkj}:
+\begin{eqnarray}
+x(t) &=& y_0 + v_0 t + \frac{1}{2} a t^2 \label{ajustenaolinear} \\
+v(t) &=& v_0 + at \label{ajustelinear} 
+\end{eqnarray}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ajuste Linear da eq. \ref{ajustenaolinear}}
+\begin{figure}
+\includegraphics[width=3.9 in]{figuras/ajuste_posicao.pdf}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Coeficientes do ajuste não linear}
+\begin{example}[Código para gerar a legenda]
+\begin{verbatim}
+\Z24Ajuste parabólico
+f\B2\M\Z24(t) = k\B0\M\Z24 + k\B1\M\Z24t + k\B2\M\Z24t\S2\M
+\Z24k\B0\M\Z24 = (0.0865 +/- 0.0008) m
+k\B1\M\Z24 = ( - 0.1921 +/- 0.0007) m/s
+k\B2\M\Z24 = (0.1062 +/- 0.0001) m/s\S2\M\Z24
+\end{verbatim}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Coeficientes do ajuste não linear}
+\begin{itemize}
+\item $\backslash$Z24 define o tamanho da fonte em 24.
+\item $\backslash$B define o próximo caracter como sub-índice, como no $f_1$. 
+\item $\backslash$S define o próximo caracter como super-índice, como no $t^2$.
+\item $\backslash$M volta ao normal e deve ser usado depois do $\backslash$B ou $\backslash$S. Tem que definir o tamanho novamente.
+\item Para o símbolo $\pm$, clique em \textit{Special} na esquerda, depois em \textit{Character} e vários símbolos aparecem.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ajuste Linear da eq. \ref{ajustelinear}}
+\begin{figure}
+\includegraphics[width=3.9 in]{figuras/ajuste_velocidade.pdf}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\Huge{\centerline{{\color{blue}Mãos a obra!!!}}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 

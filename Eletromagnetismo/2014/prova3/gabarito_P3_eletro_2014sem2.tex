@@ -1,0 +1,252 @@
+\documentclass[11pt,openany,oneside]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+
+%colocar cores nas fontes
+\usepackage{color}
+%\usepackage[usenames,dvipsnames]{color}
+
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+
+\begin{document}
+
+\hsize = 7.1 in
+\hoffset = -0.9 in
+\voffset = -0.8 in
+\vsize = 9.2 in
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+\section*{{\color{red}Gabarito}}
+
+\section*{Prova 3, 03/10/2014, Prof. Paulo Freitas Gomes}
+
+\section*{Eletromagnetismo. Curso: Física}
+
+\vspace{0.1 in}
+\noindent
+{\color{blue}1a) 1 ponto.} A grande vantagem dos CDs é que eles não tem o chiado devido ao ruído existente nos LPs. Já quando a música é convertida para os mp3, as faixas de frequência nos extremos é eliminada, de modo a diminuir o tamanho do arquivo final. Porém, esse corte de frequências diminui a qualidade do som. Assim, os LPs ainda tem uma qualidade superior ao dos arquivos mp3. 
+
+ \noindent
+{\color{blue}1b) 1 ponto.} Da definição, a densidade superficial de corrente é
+\begin{equation}
+\vec{K} = \sigma \vec{v} = \dfrac{di}{dl_{\perp}} \hat{v} \label{densidadesupercorrne}
+\end{equation}
+onde $l_{\perp}$ é o comprimento perpendicular a direção de propagação da corrente. Seja o eixo $z$ perpendicular ao plano do disco, logo a velocidade de cada elemeto de massa do disco é tangencial ao disco, no plano $xy$: 
+\begin{equation}
+\vec{v}(r) = \omega r \hat{\phi} \nonumber
+\end{equation}
+Assim, temos:
+\begin{equation}
+\vec{K}(r) = \sigma \omega r \hat{\phi} \nonumber
+\end{equation}
+
+
+\noindent
+{\color{blue}1c) 2 pontos.} $\vec{m} =$? Seja $\vec{\omega} = \omega \hat{z}$. Supondo que o disco seja uma soma de espiras infinitesimais, o momento resultante é a soma dos momentos de todas as espiras. Cada espira tem seu momento na direção perpendicular ao plano da espira. Supondo uma espira no plano $xy$, seu momento estará na direção $z$. Logo, o momento final do disco estará na direção $z$ também: $\vec{m} = m \hat{z}$. Uma vez definida a direção, vamos calcular seu módulo. Da definição: $\vec{m} = I \vec{A}$. No caso de uma espira circular, $A$ é a área englobada pela espira. Seja uma espira genérica de raio $r$ cotendo um diferencial de momento $dm$. Temos que:
+\begin{equation}
+dm = A di
+\end{equation}
+onde $A=\pi r^2$ é a área englobada pela espira e $di$ sua corrente. O diferencial é na corrente pois a área englobada pela espira não é pequena, indo de zer até a área total da superfície do disco. Da eq. \ref{densidadesupercorrne}, temos:
+\begin{equation}
+di = K dl_{\perp} = K dr = \sigma \omega r dr \label{calculdi}
+\end{equation}
+O momento fica então:
+\begin{equation}
+dm = \pi r^2 \sigma \omega r dr = \pi r^3 \sigma \omega dr \nonumber
+\end{equation}
+Integrando
+\begin{equation}
+\vec{m} =\hat{z} \int dm = \hat{z}\pi \sigma \omega \int_0^R r^3 dr = {\color{blue}\boxed{\frac{1}{4}\pi \sigma \omega R^4 \hat{z}}} \nonumber
+\end{equation}
+Outra forma de calcular $di$ é considerar a carga na espira:
+\begin{equation}
+di = \dfrac{dq}{T} = \dfrac{\sigma da}{T}  \nonumber
+\end{equation}
+Agora, $da$ é a área que contém a carga $dq$ que gira, gerando a corrente $di$. Da figura \ref{mc12}, esta área é a diferença de área entre o círculo de raio $r$ e o círculo de raio $r+dr$. Como $dr$ é muito pequeno, essa área pode ser aproximada pela área de um retângulo onde um dos lados é a circunferência do círculo menor e o outro é $dr$: $da=2\pi r dr$. Logo:
+\begin{equation}
+di =  \dfrac{ 2\pi }{T}\sigma rdr = \omega \sigma rdr   \nonumber
+\end{equation}
+Veja que este resultado é idêntico ao da eq. \ref{calculdi}.
+
+\begin{SCfigure}
+\centering
+\includegraphics[width=3.5 in]{figura1c.pdf}
+\label{mc12}
+\caption{Área $da$ que contém da carga $dq$ em rotação gerando a corrente $di$ da espira de raio $r$.}
+\end{SCfigure}
+
+
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+\vspace{0.1 in}
+
+\noindent
+{\color{blue}2a) 1 ponto.} O disco de cima flutua pois a resultante das forças atuando nele é zero. A força peso $\vec{P}_2$ o puxa para baixo enquanto que a repulsão magnética $\vec{F}_{12}$ do disco 1 o empurra para cima. Esta repulsão depende da distância entre os dois discos. Assim, há uma certa distância onde o módulo das forças se iguala, anulando a força resultante. O diagrama de corpo livre está na figura \ref{figura2a}. 
+
+
+
+\noindent 
+ {\color{blue}2b) 2 pontos.} A lei de Newton é: $\sum_i \vec{F}_i = m \vec{a} = 0$, já que o disco está em repouso. Do diagrama de corpo livre do item a), temos:
+ \begin{equation}
+ \vec{F}_{12} + \vec{P}_2 = 0 \nonumber
+ \end{equation}
+ Logo, em módulo teremos:
+ \begin{equation}
+ F_{12} = P_2 \label{igualandomodulos}
+ \end{equation}
+ A força peso é $P_2 = m_d g$, onde $g$ é a aceleração da gravidade e $m_d$ a massa do disco. Já a força magnética é devido a interação entre o campo magnético $\vec{B}_1$ gerado pelo disco 1 com o momento de dipolo magnético $\vec{m}_2$ do disco 2. Como trata-se de um campo magnético não uniforme, a força é dada por:
+ \begin{equation}
+ \vec{F}_{12} = \vec{\nabla} (\vec{m}_2 \cdot \vec{B}_1) \label{kksksllwlwlw}
+ \end{equation}
+ O campo de um dipolo magnético ao longo de $z$ ($\vec{m}_1 = m\hat{z}$) localizado na origem é dado por:
+ \begin{equation}
+ \vec{B}_1 (\vec{r}) = \dfrac{\mu_0 m}{4\pi r^3}(2\hat{r} \cos \theta + \hat{\theta} \sin \theta )  \nonumber
+ \end{equation}
+Antes de procedermos ao cálculo da força, precisamos calcular o campo na posição do dipolo $\vec{m}_2$, que também está no eixo $z$ a uma distância $z$ da origem. Isso implica em $\theta = 0$, o que por sua vez implica em $r=z$ e $\hat{r} = \hat{z}$. Assim, o campo pode ser simplificado para:
+\begin{equation}
+\vec{B}_1 (z) = \dfrac{\mu_0 m}{2\pi z^3}\hat{z}  \nonumber
+\end{equation}
+
+  Calculando agora o produto escalar da eq. \ref{kksksllwlwlw}, temos:
+ \begin{equation}
+ \vec{m}_2 \cdot \vec{B}_1(z) =  (-m\hat{z} )  \cdot \dfrac{\mu_0 m}{2\pi z^3} \hat{z} = - \dfrac{\mu_0 m^2}{2\pi z^3}  \nonumber
+ \end{equation}
+ lembrando que $\vec{m}_2 = -m\hat{z}$.  A força fica:
+ \begin{equation}
+ \vec{F}_{12} =- \vec{\nabla} \left( \dfrac{\mu_0 m^2}{2\pi z^3}\right) = -   \dfrac{\mu_0 m^2}{2\pi} \vec{\nabla} \left( z^{-3} \right) = -   \dfrac{\mu_0 m^2}{2\pi} \hat{z}\dfrac{\partial z^{-3} 
+ }{\partial z} =\dfrac{3\mu_0 m^2}{2\pi z^4} \hat{z} \nonumber
+ \end{equation}
+ Veja que como esperado, $\vec{F}_{12}$ aponta para cima, balanceando a força peso que puxa para baixo. Igualando o módulo de $\vec{F}_{12}$ com o módulo de $\vec{P}_2$ (eq. \ref{igualandomodulos}):
+ \begin{equation}
+ \dfrac{3\mu_0 m^2}{2\pi z^4} = m_d g \quad \quad \therefore \quad \quad  {\color{blue}\boxed{z =\sqrt[4]{\dfrac{3\mu m^2}{2 \pi m_d g} }}}  \nonumber
+ \end{equation}
+ 
+ \begin{SCfigure}
+\centering
+\includegraphics[width=3.0 in]{figura2a.pdf}
+\label{figura2a}
+\caption{Diagrama de corpo livre do disco 2, referente ao item 2a).}
+\end{SCfigure}
+ 
+ {\color{blue}2c) 1 ponto.} Sendo os dipolos paralelos $\vec{m}_1 = \vec{m}_2 = \vec{m}_3 = m\hat{z}$, a força entre eles será de atração, fazendo com que um encoste no outro. Dessa forma, a distância entre discos sucessivos é zero.
+ 
+ 
+ {\color{blue}2d) 2 pontos.} Da mesma forma que no item a), a forma para se encontrar a distância é escrever a soma vetorial das forças atuando no disco 2 e 3, que estando em equilíbrio, deve ser igual a zero. No disco 2, as forças atuando são: força peso $\vec{P}_2$ apontando para baixo, repulsão com o disco 1 $\vec{F}_{12}$ apontado para cima e repulsão com o disco 3 $\vec{F}_{32}$ apontando para baixo (veja figura 3): 
+ \begin{equation}
+ \vec{P}_2 = - m_d g \hat{z}  \quad \quad \therefore \quad \quad
+ \vec{F}_{12} =   \dfrac{3\mu_0 m^2}{2\pi x^4} \hat{z} \quad \quad \therefore \quad  \quad \vec{F}_{32} =   -\dfrac{3\mu_0 m^2}{2\pi y^4} \hat{z}  \nonumber
+ \end{equation}
+ Da Lei de Newton, a soma dessas forças deve ser zero, logo seus módulos satisfazem:
+ \begin{equation}
+ \dfrac{3\mu_0 m^2}{2\pi x^4} - m_g d  -\dfrac{3\mu_0 m^2}{2\pi y^4} = 0 \label{kkkkkwww}
+ \end{equation}
+ 
+As forças atuando no disco 3 são: força peso $\vec{P}_3$ apontando para baixo, força de atração com o disco 1 $\vec{F}_{13}$ apontando para baixo e força de repulsão com o disco 2 $\vec{F}_{23}$ apontando para cima (veja figura 3). 
+ \begin{equation}
+ \vec{P}_3 = - m_d g \hat{z}  \quad \quad \therefore \quad \quad 
+ \vec{F}_{13} =  - \dfrac{3\mu_0 m^2}{2\pi (x+y)^4} \hat{z} \quad \quad \therefore \quad  \quad \vec{F}_{32} =   \dfrac{3\mu_0 m^2}{2\pi y^4} \hat{z}   \nonumber
+ \end{equation}
+  Como no disco 2, seus módulos satisfazem
+ \begin{equation}
+ \dfrac{3\mu_0 m^2}{2\pi y^4} - m_g d  -\dfrac{3\mu_0 m^2}{2\pi (x+y)^4} = 0 \label{iiiwiwiwwqpp}
+ \end{equation}
+ 
+ Para encontrar uma relação entre $x$ e $y$, isolo $m_g d$ das eqs. \ref{kkkkkwww} e \ref{iiiwiwiwwqpp}:
+ \begin{eqnarray}
+  m_g d &=&  \dfrac{3\mu_0 m^2}{2\pi} \left( \dfrac{1}{x^4} - \dfrac{1}{y^4} \right)   \nonumber \\
+  m_g d &=&  \dfrac{3\mu_0 m^2}{2\pi} \left( \dfrac{1}{y^4} - \dfrac{1}{(x+y)^4}    \right)  \nonumber
+ \end{eqnarray}
+ Dividindo uma eq. pela outra, teremos
+ \begin{equation}
+ \dfrac{1}{x^4} - \dfrac{1}{y^4} = \dfrac{1}{y^4} - \dfrac{1}{(x+y)^4}  \nonumber
+ \end{equation}
+ que pode ser reescrita como
+ \begin{equation}
+ {\color{blue}\boxed{\dfrac{1}{x^4} - \dfrac{2}{y^4} + \dfrac{1}{(x+y)^4} = 0}}  \quad \quad \quad  \quad \quad \quad c.q.d. \nonumber
+ \end{equation} 
+ 
+ \begin{figure}[h!]
+\includegraphics[width=7.0 in]{figura2d.pdf}
+\label{figura2d}
+\caption{Forças atuantes nos discos 2 e 3, referente ao item 2d.}
+\end{figure}
+
+ 
+\end{document}
+
+
+

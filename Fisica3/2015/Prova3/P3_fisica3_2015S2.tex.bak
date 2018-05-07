@@ -1,0 +1,168 @@
+\documentclass[openany,oneside,paper=a4, fontsize=14pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+ % o valor padrao das margens right, left, top e bottom e de 20 mm
+
+
+\begin{document}
+
+
+\section*{\color{blue} ICET/UFG, Jataí. Prof. Paulo Freitas Gomes}
+
+\section*{\color{blue} 04/03/2016, Prova 3, Física 3.}
+
+\vspace{0.2 in}
+\noindent
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_\_
+
+\vspace{0.2 in}
+
+Dados: $\mu_0 = 4\pi \times 10^{-7}$ Tm/A, carga do elétron = $e=1,6\times 10^{-19}$ C.
+
+\vspace{0.2 in}
+\noindent
+1) \textbf{Momento magnético do átomo de hidrogênio}. No modelo de Bohr do átomo de hidrogênio, no seu estado mais inferior de energia, o elétron orbita o próton a uma velocidade escalar de $2,2 \times 10^6$ m/s, em uma órbita circular com raio igual a $5,3 \times 10^{-11}$ m (veja figura \ref{eletron}). Perguntas: 
+
+\vspace{0.2 in}
+\noindent
+a) Qual o período orbital $T$ do elétron? 
+
+\vspace{0.2 in}
+\noindent
+b) Se considerarmos o elétron em órbita como uma espira de corrente, qual será a corrente $I$? 
+
+\vspace{0.2 in}
+\noindent
+c) Calcule o momento de dipolo magnético dessa corrente. d) Essa descrição do movimento orbital do elétron é útil pois traz resultados compatíveis com o experimento. Porém, esse movimento é real? O elétron realmente revoluciona em torno do núcleo? 
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=2.5 in]{figuras/eletron.pdf}
+\label{eletron}
+}
+\subfigure{b)
+\includegraphics[width=2.9 in]{figuras/fioplano.pdf}
+\label{fioplano}
+}
+\subfigure{c)
+\includegraphics[width=2.9 in]{figuras/coaxial.pdf}
+\label{coaxial}
+}
+\caption{\subref{eletron} Geometria referente ao problema 2. \subref{fioplano} Figura referente ao problema 3. \subref{coaxial} Cabo coaxial referente ao problema 3.}
+\end{figure}
+
+\vspace{0.2 in}
+\noindent
+2) Um fio retilíneo condutor de massa $M$ e comprimento $L$ é colocado sobre um plano inclinado sem atrito, formando um ângulo $\theta$ com a horizontal (figura \ref{fioplano}). Existe um campo magnético vertical uniforme $\vec{B}$ ao longo de todos os pontos. Para impedir que o fio escorregue para baixo do plano, uma fonte de tensão é aplicada nas extremidades do fio. Quando uma corrente com um valor preciso circula no fio, ele permanece em repouso. Determine o módulo e o sentido da corrente que circula para fazer o fio ficar em repouso. Copie a figura e desenhe o sentido da corrente no seu desenho. Além disso, faça um diagrama de corpo livre mostrando todas as forças que atuam sobre o fio.  
+
+\vspace{0.2 in}
+\noindent
+3) \textbf{Cabo coaxial}. Um condutor sólido com raio $a$ é suportado por discos isolantes no centro de um tubo condutor com raio interno $b$ e raio externo $c$, veja figura \ref{coaxial}. O condutor central e o tubo transportam correntes com o mesmo módulo $I$, porém com sentidos contrários. As correntes são distribuídas uniformemente ao longo da seção reta de cada condutor. Deduza uma expressão para o módulo do campo magnético (a) nos pontos no exterior do condutor sólido central, porém no interior do tubo ($a<r<b$); (b) nos pontos no exterior do tubo ($r>c$); (c) e nos pontos dentro da casca cilíndrica ($b<r<c$).
+ 
+\vspace{0.2 in}
+4) Um disco dielétrico fino, com raio $a$, possui uma carga total $+Q$ distribuída uniformemente sobre sua superfície. Ele gira com uma frequência $f$ em torno de um eixo perpendicular à sua superfície, passando por seu centro. Calcule o campo magnético no centro do disco. Explique cada elemento utilizado no cálculo. Dica: o campo magnético de uma espira de raio $a$ para um ponto no seu eixo de simetria a uma distância $z$ do plano da espira é 
+\begin{equation}
+B_z = \dfrac{\mu_0 I a^2}{2(z^2+ a^2)^{3/2}}
+\end{equation}
+
+
+
+\vspace{0.2 in}
+ 
+ \textbf{Fórmulas para consulta}
+
+\begin{equation}
+   \vec{F}_M = I \vec{L} \times \vec{B}  \quad \quad  \vec{B} = \dfrac{\mu_0}{4\pi}\int I\dfrac{d\vec{l} \times \hat{r}}{r^2}  \quad \quad \omega = \dfrac{2\pi}{T} =  2\pi f  \quad \quad \vec{B} = \dfrac{\mu_0}{4\pi} q \dfrac{\vec{v} \times \hat{r}}{r^2}  \quad \quad \vec{\mu} = I\vec{A}  \nonumber
+\end{equation} 
+\vspace{0.1 in}
+\begin{equation}
+v = \omega R  \quad \quad \hat{i} \times \hat{j} = \hat{k} \quad \quad   \vec{A} \times \vec{B} = -\vec{B} \times \vec{A} \nonumber
+\end{equation} 
+
+
+
+
+
+ 
+\end{document}
+
+
+

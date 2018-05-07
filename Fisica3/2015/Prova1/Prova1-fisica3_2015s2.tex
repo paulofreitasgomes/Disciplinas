@@ -1,0 +1,163 @@
+%\documentclass[12pt,openany,oneside]{article}
+\documentclass[12pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+%colocar texto do lado de figuras
+\usepackage{wrapfig}
+
+
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%editar captions
+%\usepackage{floatrow}
+%\usepackage{caption}
+
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+%\nopagenumbers
+
+%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+
+\begin{document}
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+
+
+\subsection*{Jataí, 19/01/2016. ICET - UFG - Jataí.}
+
+\subsection*{Prova 1, Física 3, Prof. Paulo Freitas Gomes.}
+
+
+\vspace{0.4 in}
+\noindent
+Nome Completo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_
+
+\vspace{0.3 in}
+
+Dados: $\varepsilon_0 = 8,85\times 10^{-12}$ C$^2$N$^{-1}$m$^{-2}$, $e$ = carga elementar do próton = 1,6$\times 10^{-19}$ C. Use $V$ para o potencial elétrico e $\tau$ para volume. Para uma esfera de raio $R$ o volume é $\tau=\dfrac{4}{3}\pi R^3$ e a área $A=4\pi R^2$.
+
+\vspace{0.2 in}
+
+\noindent
+\begin{enumerate}
+
+\item \textbf{Energia do núcleo.} Qual é a energia necessária para montar um núcleo atômico contendo três prótons, se o modelarmos como um triângulo equilátero de lado $a=2\times 10^{-15}$ m (veja figura \ref{triangulo}), com um próton em cada vértice? Suponha que os prótons partiram de uma distância muito grande.
+
+\item \textbf{Semi-circunferência.} Uma carga positiva $Q$ é distribuída uniformemente ao longo de uma semi-circunferência de raio $a$ (veja figura \ref{semicirculo}). Calcule o campo elétrico $\vec{E}$ no centro de curvatura P.
+
+\item \textbf{Modelo de Thomson para o átomo.} Imagine um átomo constituído por um elétron de massa $m$ e carga $-e$, que pode ser considerado uma carga puntiforme, e uma esfera de raio $R$ uniformemente carregada com uma carga total $+e$. a) Onde (dentro do átomo) pode ser a posição de equilíbrio para o elétron?
+(Lembre-se da Lei de Gauss). b) Suponha que o material positivo do átomo não oferece resistência ao movimento do elétron. Mostre que se o elétron se deslocar de sua posição de equilíbrio até uma distância menor que $R$, o movimento resultante do elétron deve ser harmônico simples (MHS) (Sugestão: a força resultante típica do MHS é: $F(x) = -m\omega^2 x$). c) Nesse modelo, a frequência $f=\omega/(2\pi)$ das ondas emitidas seria a mesma das oscilações do elétron no átomo. Qual deve ser o raio do átomo no modelo de Thomson para que ele emita luz vermelha com uma frequência $f$. Acho o valor numérico de $R$ se $f=4,57 \times 10^{14}$ Hz? 
+
+\item \textbf{Quem sou eu?} Eu nasci em 1777 e desde cedo fui um garoto prodígio. Quando tinha 8 anos consegui calcular a soma do 100 primeiros números naturais. Aos meus 19 anos mostrei que um polígono regular pode ser construído por círculos e retas se, e apenas se, o número de lados é produto de números primos de Fermat e de uma potência de 2. Isto foi uma grande descoberta na matemática, pois resolveu um problema milenar da época dos gregos. Também desenvolvi a aritmética modular, provei a lei da reciprocidade quadrada, terminei o Disquisitiones Arithmeticae, desenvolvi a Teorema dos Números Primos, previ corretamente a posição do planeta anão Ceres em 1801, desenvolvi a geometria não-Euclidiana, etc... Quem sou eu?
+
+\item \textbf{Energia própria de uma esfera de carga.} Uma esfera maciça, de raio $R$, contém uma carga total $Q$ distribuída uniformemente por todo o seu volume. Ache a energia necessária para juntar essa carga, trazendo cargas infinitesimais de pontos distantes. Essa energia é chamada de energia própria da distribuição. \textit{Sugestão}: após juntar uma carga $q$ em uma esfera de raio $r$, quanta energia será necessária para acrescentar uma casca esférica de espessura $dr$ possuindo carga $dq$? Depois, integre para obter a energia total. Dica: o elemento de volume $d\tau$ de uma casca esférica de raio interno $r$ e com uma espessura muito pequena $dr$ é a área superficial da esfera vezes a espessura: $d\tau = 4\pi r^2 dr$, veja figura \ref{shell}.
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=1.6 in]{Triangle.pdf}
+\label{triangulo}
+}
+\subfigure{b)
+\includegraphics[width=2.8 in]{semicirculo.pdf}
+\label{semicirculo}
+}
+\\
+\subfigure{c)
+\includegraphics[width=1.9 in]{shell.pdf}
+\label{shell}
+} 
+
+
+\caption{ \subref{triangulo} Triângulo equilátero de lado $a$, referente ao problema 1. \subref{semicirculo} Semicirculo com carga $Q$ e raio $a$. Geometria referente ao problema 2. \subref{shell} Ilustração da seção transversal de uma casca esférica diferencial de espessura $dr$ e raio interno $r$ dentro de uma esfera de raio $R$. O elemento de volume é $d\tau$. Figura referente ao problema 4. }
+\end{figure}
+
+\end{document}
+
+
+

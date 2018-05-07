@@ -1,0 +1,184 @@
+%\documentclass[12pt,openany,oneside]{article}
+\documentclass[12pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+
+%colocar texto do lado de figuras
+\usepackage{wrapfig}
+
+
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%editar captions
+%\usepackage{floatrow}
+%\usepackage{caption}
+
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=15mm,
+ right=15mm,
+ top=15mm,
+ bottom=15mm,
+ }
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+%comando para colocar vetor linha
+%deve ser usado com o comando \vec{p}+\pvec{p}'=\pvec{p}''
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+
+\begin{document}
+
+
+\pagenumbering{gobble} % remove o numero da pagina
+
+\subsection*{Jataí, 24/06/15. Universidade Federal de Goiás, ICET, Jataí.}
+
+\subsection*{Prova 4, Física 3, Física. Prof. Paulo Freitas Gomes.}
+
+\vspace{0.5 in}
+\noindent
+Nome Completo: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_\_
+
+
+\vspace{0.2 in}
+
+\noindent
+\textbf{1) Variação de fluxo e fem de movimento}   Na figura \ref{circuito9.png}, a espira está sendo puxada para a direita a uma velocidade escalar constante $v$. Uma corrente constante $I$ flui pelo fio longo, no sentido indicado.  Calcule o módulo da fem induzida resultante $\varepsilon$ na espira. Faça isso de duas formas diferentes: 
+
+\noindent
+{\color{blue}a)} usando a lei de Faraday da Indução;
+
+\noindent
+{\color{blue}b)} analisando a fem induzida em cada segmento da espira em função do seu movimento. 
+
+\noindent
+{\color{blue}c)} Qual o sentido da corrente induzida na espira?
+
+
+\vspace{0.2 in}
+
+\noindent
+\textbf{2)} \textbf{Guitarra e usina hidrelétrica} 
+
+\noindent
+{\color{blue}a)}  Qual a importância da guitarra em nosso mundo a partir do século XX? 
+
+\noindent
+{\color{blue}b)} Qual a importância da conversão de energia cinética em energia elétrica também no mundo a partir do século XX?
+
+\noindent
+{\color{blue}c)} Qual a lei da física que descreve o princípio de funcionamento da guitarra e da usina? 
+ 
+\noindent 
+{\color{blue}d)} Explique esse princípio de funcionamento usando essa lei física em ambos os casos. Mostre como apenas uma lei está presente em ambos.   
+
+\vspace{0.2 in}
+
+\noindent
+\textbf{3) O que os voltímetros medem?} Considere o circuito da figura \ref{circuito3_P4} no qual há dois resistores $R_1$ e $R_2$ apenas. Dentro do circuito há um solenóide cuja corrente aumenta linearmente com o tempo, de forma que o fluxo do campo magnético é proporcional ao tempo:
+\begin{equation}
+\Phi_m (t) =  \int_S \vec{B}(t) \cdot d\vec{a} = \varepsilon_0 t. \label{eqlskdjfjeww}
+\end{equation}
+ Dois voltímetros são conectados em pontos diametralmente opostos (A e B) no circuito externo ao solenóide. 
+
+
+\noindent
+{\color{blue}a)} Qual o sentido da corrente induzida que passa nos resistores? 
+
+\noindent
+{\color{blue}b)} Calcule o valor da corrente.
+
+\noindent
+{\color{blue}c)} Calcule o valor da tensão em cada um dos resistores.
+
+\noindent
+{\color{blue}d)} Seja $V_1$ a tensão medida pelo o voltímetro $V_1$. Esse valor é igual a tensão no resistor $R_1$ ou no $R_2$? Calcule $V_1$. Dica 1: isso é uma prova de física. Dica 2: a tensão que o voltímetro lê é a tensão em seus terminais ao longo do caminho $C_1$ que passa por ele:
+\begin{equation}
+V_1 = \underset{C_1}{\int_A^B} \vec{E} \cdot \,d\vec{l}
+\end{equation}
+
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.9 in]{circuito9.png}
+\label{circuito9.png}}
+\subfigure{b)
+\includegraphics[width=2.9 in]{circuito3_P4.pdf}
+\label{circuito3_P4}}
+\caption{\subref{circuito9.png} Circuito referente ao problema 2. \subref{circuito3_P4} Mesmo circuito com indicação das malhas.}
+\end{figure}
+
+
+
+\end{document}
+
+
+

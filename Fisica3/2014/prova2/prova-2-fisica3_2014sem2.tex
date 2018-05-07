@@ -1,0 +1,147 @@
+\documentclass[openany,oneside,paper=a4, fontsize=11pt]{article}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+
+%estes dois packages sao para tornar automaticos a acentuacao grafica em portugues: Ã£, Ã©, Ã´, etc...
+%infelizmente e misteriosamente, isso nao funciona no meu mac, no windows funcionava...
+%tendo que usar \~a para Ã£, etc... 
+
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% essa linha foi utilizada para corrigir o erro
+% auto expansion is only possible with scalable
+\usepackage{lmodern}
+
+\usepackage{titlesec}
+
+% possibilida criar figuras 1a) e 1b), por exemplo
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%possibilita criar figuras com legenda na lateral
+\usepackage{sidecap}
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=4.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+\usepackage{color}
+\usepackage{calc}
+\usepackage{titletoc}
+
+%para criar o espacamento usual no primeiro paragrafo
+\usepackage{indentfirst}
+
+\usepackage{pifont}
+
+% para criar os links no texto quando cita equacoes, figuras, referencias, secoes, etc...
+\usepackage{hyperref}
+
+% para colorir os links criados anteriormente
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=darkgreen,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+% possibilita inserir paginas avulsas de arquivos pdf no meio do texto
+\usepackage{pdfpages}
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+\hsize = 7.2 in
+\hoffset = -0.9 in
+\voffset = -0.8 in
+\vsize = 9.3 in
+
+\section*{\color{blue} Prova 2. Jataí - UFG, 08/10/2014. Prof. Paulo Freitas Gomes}
+
+\section*{\color{blue} Física 3 para Física. Prof. Paulo Freitas Gomes}
+
+\vspace{0.2 in}
+
+Nome: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Matrícula:\_\_\_\_\_\_\_\_
+
+\vspace{0.2 in}
+
+1) {\color{red}2,5 pontos.} Considere o circuito da figura \ref{circuito2}. Encontre 3 equações das quais pode-se obter as 3 correntes indicadas. Dica: explique seus passos, seja organizado e didático, faça um desenho grande indicado adequadamente todos os nós e malhas utilizados.
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=2.9 in]{figuras/circuito2.pdf}
+\label{circuito2}
+}
+\subfigure{b)
+\includegraphics[width=6.0 in]{figuras/rede.pdf}
+\label{rede}
+}
+\caption{\subref{circuito2} Figura referente ao problema 1. \subref{rede} Circuito referente ao problema 2. Outlet = tomada, main fuse = fusível principal, fuse = fusível secundário, hot line = fase, neutral line = neutro e ground = terra.}
+\end{figure}
+
+\vspace{0.1 in}
+
+2) {\color{red}2 pontos.} \textbf{Circuito residencial}. Considere o circuito residencial ilustrado na figura 1b). a) Por que as tomadas (outlets) são ligadas em paralelo entre si? b) Qual fusível deve suportar maior corrente: o principal (main fuse) ou o secundário (fuse)? c) Como deve ser feito o aterramento para o fio terra da residência? d) Supondo uma casa em Jataí, qual seria a tensão das duas fases?
+
+\vspace{0.1 in}
+
+3) {\color{red}2,5 pontos.} a) Qual é a diferença de potencial $V_{ad}$ no circuito indicado na figura \ref{circuito1}? b) Qual é a voltagem nos terminais da bateria de 4 V?
+
+
+\begin{figure}[h!] 
+\centering
+\subfigure{a)
+\includegraphics[width=3.0 in]{figuras/circuito1.pdf}
+\label{circuito1}
+}
+\subfigure{b)
+\includegraphics[width=2.4 in]{figuras/resistencia.pdf}
+\label{resistencia}
+}
+\caption{\subref{circuito1} Circuito referente ao problema 3. \subref{resistencia} Resistência típica de um chuveiro.}
+\end{figure}
+
+4) {\color{red}3 pontos.} Em Jataí, a tensão nominal nas residências é de $V$ = 240 V. Em um chuveiro elétrico, a potência elétrica consumida é dissipada em calor pela sua resistência o qual esquenta a água para o banho. Na figura \ref{resistencia} está uma foto de uma resistência típica, onde pode-se ver os 3 contatos. Quando o interruptor do chuveiro está na posição verão, a tensão é aplicada entre os terminais A e C, ou seja, a corrente percorre todo o comprimento $L$ = 2 m da resistência. Considere que a área da seção transversal do fio da resistência seja $A=10^{-8}$ m$^2$ e a sua resistividade seja de $\rho= 7\times 10^{-8}$ $\Omega$m. a) Qual a resistência $R_v$ na posição verão? b) Qual a corrente elétrica $I_v$ que percorre a resistência? c) Qual a potência $P_v$ dissipada termicamente pela resistência? d) Na posição inverno, a tensão é aplicada entre os terminais A e B, fazendo com que a corrente percorra um comprimento $l$ = 1 m, menor do que no caso verão. e) Calcule novamente a nova resistência $R_i$, corrente $I_i$ e potência $P_i$. Em qual posição do chuveiro (verão ou inverno) a água sai mais quente? f) Qual o fator determinante para o aquecimento da água, a corrente ou a resistência? Explique.
+
+%\vspace{0.2 in}
+ 
+ \section*{Fórmulas para consulta}
+
+
+\begin{equation}
+C = \dfrac{Q}{V} \quad \quad C = \varepsilon_0 \dfrac{A}{d}  \quad \quad U = \dfrac{Q^2}{2C} \quad \quad  \vec{E} = \rho \vec{J} \quad \quad V = \varepsilon - rI \quad \quad C_p =  C_1+C_2  \nonumber 
+\end{equation} 
+\vspace{0.1 in}
+\begin{equation}
+\dfrac{1}{C_s} = \dfrac{1}{C_1}+ \dfrac{1}{C_2}    \quad \quad R = \rho \dfrac{L}{A} \quad \quad R_s = R_1+R_2 \quad \quad \dfrac{1}{R_p} =  \dfrac{1}{R_1} + \dfrac{1}{R_2}  \nonumber
+\end{equation} 
+ 
+
+ 
+\end{document}
+
+
+
